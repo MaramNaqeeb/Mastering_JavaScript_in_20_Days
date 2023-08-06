@@ -39,12 +39,12 @@ document.querySelectorAll(“.player”) //This is another way to show the eleme
 Note: Instead or remembering all stuffs about HTML, CSS, or JS, you can simply use is a free resource for in-depth documentation on web standards such as HTML, CSS, JavaScript, and much more.
 
 ## Exercises in the console from Tic Tac Toe app:
-- Retrieve the p elements.
+#### Retrieve the p elements.
   ```javascript
  document.getElementsByTagName("p")
 //the output: HTMLCollection(2) [p#p1.player, p#p2.player, p1: p#p1.player, p2: p#p2.player]
   ```
--Retrieve the text “X”.
+#### Retrieve the text “X”.
    ```javascript
    document.getElementById("p1-symbol").textContent
 //the output: 'X'
@@ -52,7 +52,7 @@ Note: Instead or remembering all stuffs about HTML, CSS, or JS, you can simply u
   document.querySelector("#p1-symbol").textContent
 //the output: 'X'
    ```
--Find the numbers of the squares in the board.
+#### Find the numbers of the squares in the board.
    ```javascript
    document.getElementsByClassName("square").length
 //the output: 9
@@ -60,7 +60,7 @@ Note: Instead or remembering all stuffs about HTML, CSS, or JS, you can simply u
  document.querySelector("square").length
 //the output: 9
    ```
--Retrieve the text “A game you know”.
+#### Retrieve the text “A game you know”.
 ```javascript
 document.querySelector("h2").textContent
 //the output:'A game you know'
