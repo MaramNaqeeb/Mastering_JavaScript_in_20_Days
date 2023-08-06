@@ -30,9 +30,33 @@ document.querySelector(“#board”) // This is another way to show the element 
 document.getElementByClassName(“player”) // This shows the element that have the class name “player”.
 document.querySelectorAll(“.player”) //This is another way to show the element that have the class name “player”.
 ```
+## .length & .textContent
+```javascript
+.length // Gives us the number of elements that a specific query selector returns
 
+.textContent  //It types the text inside a specific element with a specific query selector.
+```
+Note: Instead or remembering all stuffs about HTML, CSS, or JS, you can simply use is a free resource for in-depth documentation on web standards such as HTML, CSS, JavaScript, and much more.
 
+## Exercises in the console from Tic Tac Toe app:
+1.	Retrieve the p elements.
+   ```javascript
 
-
-
-
+ 	document.getElementsByTagName(“p”)
+  ```
+4.	Retrieve the text “X”.
+   ```javascript
+   document.getElemntById(“p1-symbol”)
+   // OR
+   document.querySelector(“#p1-symbol”)
+   ```
+3.	Find the numbers of the squares in the board.
+   ```javascript
+   	document.getElementById(“square”).length
+   // OR 
+   document.querySelector(“#square”).length
+   ```
+4.	Retrieve the text “A game you know”.
+	```javascript
+	document.queryselectorAll(“h2”).textContent
+  ```
