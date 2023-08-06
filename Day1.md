@@ -10,7 +10,7 @@ HTML is about the content and the structure of the web elements.
 
 CSS is about the positioning and designing the web elements.
 
-JS is about the actions of the web element. 
+JS is about the actions of the web elements. 
 
 ## Where to write and run JS code:
 We can write JS code on the browser’s JS console, the local text file such as TextEdit or VS code, or online playground such as CodePen or CodeSandBox.
@@ -18,7 +18,7 @@ We can write JS code on the browser’s JS console, the local text file such as 
 ## What is DOM 
 DOM is a shortcut of Document Object Model in which JS creates an object model or entity that represents the HTML Document with its content and elements.
 
-Note1: If we type document in the console, we get all the values and stuffs that represents HTML document to JS.
+Note1: If we type ``` document ```in the console, we get all the values and stuffs that represents HTML document to JS.
 Note2: We use the dot notation to access a specific object in the document.
 
 ### Here are some examples that show how we can work with the document object from the console:
@@ -31,11 +31,10 @@ document.getElementByClassName(“player”) // This shows the element that have
 document.querySelectorAll(“.player”) //This is another way to show the element that have the class name “player”.
 ```
 ## .length & .textContent
-```javascript
-.length // Gives us the number of elements that a specific query selector returns
+```.length ``` Gives us the number of elements that a specific query selector returns
 
-.textContent  //It types the text inside a specific element with a specific query selector.
-```
+```.textContent ``` It types the text inside a specific element with a specific query selector.
+
 Note: Instead or remembering all stuffs about HTML, CSS, or JS, you can simply use is a free resource for in-depth documentation on web standards such as HTML, CSS, JavaScript, and much more.
 
 ## Exercises in the console from Tic Tac Toe app:
