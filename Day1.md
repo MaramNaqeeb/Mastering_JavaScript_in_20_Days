@@ -82,3 +82,17 @@ We can swap the symbols X and O from the app through the following command lines
 document.getElementById("p1-symbol").textContent="O"
 document.getElementById("p2-symbol").textContent="x"
 ```
+## JavaScript Challenges
+#### Compound Assignment With Augmented Multiplication
+Instead of assigning the variable to itself and multiply it to a number, we can simply use the Compound Assignment With Augmented Multiplication which can be represented by *=
+
+Here is some examples:
+```javascript
+let a = 5;
+let b = 12;
+let c = 4.6;
+
+a *= 5; //instead of a = a * 5
+b *= 3; //instead of b = 3 * 3
+c *= 10; //instead of c = c * 10
+```
