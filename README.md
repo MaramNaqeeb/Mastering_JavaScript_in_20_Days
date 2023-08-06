@@ -29,5 +29,6 @@ This is a camera lens of my amazing sprint journey in which I will enhance my Ja
 
 ## Daily Learnig Process
 
-![process](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/ed977d4f-226d-4215-b851-fa060cf71647)
+![process](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/f13e0187-c892-44f2-9c42-27e64f4174d7)
+
 
