@@ -41,28 +41,28 @@ Note: Instead or remembering all stuffs about HTML, CSS, or JS, you can simply u
 #### Retrieve the p elements.
   ```javascript
  document.getElementsByTagName("p")
-//the output: HTMLCollection(2) [p#p1.player, p#p2.player, p1: p#p1.player, p2: p#p2.player]
+//The output: HTMLCollection(2) [p#p1.player, p#p2.player, p1: p#p1.player, p2: p#p2.player]
   ```
 #### Retrieve the text “X”.
    ```javascript
    document.getElementById("p1-symbol").textContent
-//the output: 'X'
+//The output: 'X'
    // OR
   document.querySelector("#p1-symbol").textContent
-//the output: 'X'
+//The output: 'X'
    ```
 #### Find the numbers of the squares in the board.
    ```javascript
    document.getElementsByClassName("square").length
-//the output: 9
+//The output: 9
    // OR 
  document.querySelector("square").length
-//the output: 9
+//The output: 9
    ```
 #### Retrieve the text “A game you know”.
 ```javascript
 document.querySelector("h2").textContent
-//the output:'A game you know'
+//The output:'A game you know'
 ```
 ## Editing the DOM in the JS console:
 What we did above is retrieving some info from the Dom in the console, but we can edit the DOM in the console as well, and here are some examples:
