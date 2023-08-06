@@ -7,11 +7,11 @@ This is a camera lens of my amazing sprint journey in which I will enhance my Ja
   <img src="https://miro.medium.com/v2/resize:fit:2000/1*BPSx-c--z6r7tY29L19ukQ.png"  width="100%" height="40%">
 
 
-  ## Overview
+## Overview
 - **Duration:** 20 days
 - **Objective:** Improve JavaScript proficiency through daily learning and practice
 
-  ## Courses
+## Courses
   
 ![js 1](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/77ae12ff-ddeb-4a7d-b00a-533201fa34fa)
  - [JavaScript: From First Steps to Professional](https://frontendmasters.com/courses/javascript-first-steps/)
