@@ -105,7 +105,7 @@ myString="This is my first sentence."
 myString+="This is my second sentence"
 //The output: This is my first sentence. This is my second sentence.
 ```
-### 3rd: Use Bracket Notation to Find the Nth-to-Last Character in a String
+#### 3rd: Use Bracket Notation to Find the Nth-to-Last Character in a String
 We can use bracket notation including the length of the string minus the number of the last character assigned.
 ##### Example:
 ###### Use bracket notation to find the second-to-last character in the lastName string.
