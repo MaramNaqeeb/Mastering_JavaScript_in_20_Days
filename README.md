@@ -25,8 +25,6 @@ This is a camera lens of my amazing sprint journey in which I will enhance ny Ja
 ![js 3](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/8a943db4-d7f2-4826-94cb-62e29b3b369c)
  - [Deep JavaScript Foundations, v3](https://frontendmasters.com/courses/deep-javascript-v3/)
 
-## Coding Challenges
- - [First Challenge](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/convert-celsius-to-fahrenheit)
 
 ## Daily Learnig Process
 
