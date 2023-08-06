@@ -1,4 +1,4 @@
-# Javascript Learing Sprint _20_Days
+# JavaScript Learing Sprint _20_Days
 
 Hi there,
 
