@@ -18,7 +18,19 @@ We can write JS code on the browser’s JS console, the local text file such as 
 ## What is DOM 
 DOM is a shortcut of Document Object Model in which JS creates an object model or entity that represents the HTML Document with its content and elements.
 
-### Note If we type document in the console, we get all the values and stuffs that represents HTML document to JS.
+Note1: If we type document in the console, we get all the values and stuffs that represents HTML document to JS.
+Note2: We use the dot notation to access a specific object in the document.
+
+### Here are some examples that show how we can work with the document object from the console:
+```javascript
+document.title // This shows the title of the document on the browser tab.
+document.body // This shows the body of the document that contains all of the document content.
+document.getElementById(“board”) // This shows the element which has the id “board”
+document.querySelector(“#board”) // This is another way to show the element which has the id “board”.
+document.getElementByClassName(“player”) // This shows the element that have the class name “player”.
+document.querySelectorAll(“.player”) //This is another way to show the element that have the class name “player”.
+```
+
 
 
 
