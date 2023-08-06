@@ -72,7 +72,7 @@ We can change the title of the page from “TicTacToe” to “A game to play”
 ```javascript
 document.title=“A game to play”
 ```
-We can add the name”Sofia” ,for example, to the name “Anjina”   in the player “x” through the following command line:
+We can add the name”Sofia” ,for example, to the name “Anjina” of the player “x” through the following command line:
 
 ```javascript
 document.getElementById(“p1-name”).append(“ & Sofia”)
