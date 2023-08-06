@@ -65,3 +65,20 @@ Note: Instead or remembering all stuffs about HTML, CSS, or JS, you can simply u
 document.querySelector("h2").textContent
 //the output:'A game you know'
 ```
+## Editing the DOM in the JS console:
+What we did above is retrieving some info from the Dom in the console, but we can edit the DOM in the console as well, and here are some examples:
+
+We can change the title of the page from “TicTacToe” to “A game to play” through the following command line:
+```javascript
+document.title=“A game to play”
+```
+We can add the name”Sofia” ,for example, to the name “Anjina”   in the player “x” through the following command line:
+
+```javascript
+document.getElementById(“p1-name”).append(“ & Sofia”)
+```
+We can swap the symbols X and O from the app through the following command lines: 
+```javascript
+document.getElementById("p1-symbol").textContent="O"
+document.getElementById("p2-symbol").textContent="x"
+```
