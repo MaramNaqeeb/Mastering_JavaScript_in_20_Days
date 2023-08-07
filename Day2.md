@@ -103,6 +103,24 @@ OR
 document.querySelector("header h1").textContent=upperHeader
 ```
 
+## Operators
+
+``` + ```for add
+
+``` -``` for aubtract
+
+``` *``` for multiply 
+
+``` /``` for divide
+
+## Comparison Operators
+``` >``` greater than
+
+``` <``` less than 
+
+``` >=``` greater than or equal to
+
+``` <=``` less than or equal to
 
 
 
