@@ -122,6 +122,16 @@ document.querySelector("header h1").textContent=upperHeader
 
 ``` <=``` less than or equal to
 
+## Equality Operators
+
+```===``` strict equal operator
+
+```==``` loosey-goosey equal operator
+
+```!==``` strict unequal operator
+
+```!=``` loosey-goosey unequal operator
+
 
 
 
