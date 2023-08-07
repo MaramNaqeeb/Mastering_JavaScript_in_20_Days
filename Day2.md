@@ -63,13 +63,47 @@ If I ask to get the index of an inexistent character in a string eg “Hello”.
 #### 4th: ```toLowerCase()``` or ```toUpperCase```
 ```toLowerCase()```  it gives the lowercase version of the given string
 
-``toUpperCase``` it gives the uppercase version of the given string
+```toUpperCase``` it gives the uppercase version of the given string
 
-#### Note:
+#### Note1:
 We can ask for the index of substrings that have multiple characters 
 Using indexOf with multiple characters:
 ```“Hello”.indexOf(“lo”)```  returns 3 it represents the position of those character 
 ```“Hello”.indexOf(“lol”)```   returns -1
+
+#### Note2: we can concatenate strings using + operator
+
+## Exercises on the Tic Tac Toe website:
+#### 	Add your last name in the player listing
+```javascript
+document.getElementById(“p1-name”).append(”Naqib”)
+//or
+document.getElementById(“p1-name”).textContent+=”Naqib”
+//or
+document.getElementById(“p1-name”).textContent=”Maram”+” ”+”Naqib”
+```
+
+#### Retrieving the first “T” in the page title
+```javascript
+document.title.indexOf(“T”)  9
+//so
+document.title[9] //th eoutput: "T"
+```
+#### 	Answer whether the page title contains the string “JavaScript”
+
+```document.title.includes(“JavaScript”)``` the output:  false  
+While
+
+```document.title.includes("JavascripT")``` the output: true  because of the capital T 
+#### 	Capitalize the heading “Tic Tac Toe” 
+    ```document.querySelector("header h1").style.textTransform="upperCase"```
+OR
+
+```var upperHeader= document.querySelector("header h1").textContent.toUpperCase()
+document.querySelector("header h1").textContent=upperHeader
+```
+
+
 
 
 
