@@ -17,3 +17,37 @@ We can use ```typeOf``` to return a string that indicates the type of values in 
 #### Boolean: it returns true or false values
 #### Undefined: it happens when the user does not assign the variable to a value mistakely.
 #### Null: it happens when the user assign the variable to null value intendedly.
+
+
+## Exercise  
+#### Define the type of the value: 
+```false```   Boolean 
+
+```“true” ```  string
+
+```document.title ```   string 
+
+```“some string”.length```    number 
+
+```Null```    null despite of the fact that in the console it returns its type as an object  
+
+## Strings 
+Strings are made up of smaller units of text called characters that spin together to form a word ,a sentence or emoji etc.
+
+#### Some features with strings
+```indexOf()```  to return the index of the first appearance of a specific character in a string 
+Example:
+```“Hello”.indexOf(“e”)```  //the output: 1
+```“Hello”.indexOf(“l”)```  //the output: 2
+
+#### Case sensitive
+if I ask for a lower case while I have uppercase it returns -1
+
+If I ask to get the index of an inexistent character in a string eg “Hello”.indexOf(“c”) the result is -1
+
+
+
+
+
+
+
