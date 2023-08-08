@@ -132,6 +132,33 @@ document.querySelector("header h1").textContent=upperHeader
 
 ```!=``` loosey-goosey unequal operator
 
+## Learning sprint (1), week (3), day (2) delieverables
+#### QUESTION #1
+Consider the following JavaScript code:
+
+What will be the output of each console.log statement? You MUST explain WHY.
+
+```javascript
+let a = 0;
+let b = "0";
+let c = false;
+let d = "false";
+
+console.log(a == b);   // the output: true  because here there is a loosey equal operator 
+console.log(b === c);  // the output: false  because here there is a strict equal operator 
+console.log(!!d);      // the output: true    because !!  means the negeative of the negative which is positive 
+```
+#### QUESTION #2:
+Consider the following JavaScript expression:
+
+What will be the output of this expression? You MUST explain the steps of evaluation taken by JS.
+```javascript
+console.log(4 + 5 * "7");
+// the output: 9
+// explanation: JS will multiply 5 by 7 without first as the multiplication is the strongest operation and then it adds 4 to the result of the multiplication and it does not care about the quotes around number 7
+```
+
+
 
 
 
