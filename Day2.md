@@ -172,7 +172,7 @@ What will be the output of this expression? You MUST explain the steps of evalua
 ```javascript
 let result = 5 + 2 * 3 - 1;
 // the output: 10
-// explanation: JS will multiply 2 by 3 first as multiplication is the strongest oparation and then it subtract one from the result then it adds 5 to the result
+// explanation: JS will multiply 2 by 3 first as multiplication is the strongest oparation and then it adds 5 to the result and then subtract 1 from the result as we the operators of the same level such as + and - work from left to right 
 ```
 
 
