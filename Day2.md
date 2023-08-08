@@ -157,8 +157,29 @@ console.log(4 + 5 * "7");
 // the output: 9
 // explanation: JS will multiply 5 by 7 without first as the multiplication is the strongest operation and then it adds 4 to the result of the multiplication and it does not care about the quotes around number 7
 ```
+#### QUESTION #4:
+Consider the following code:
 
+What will be the output of each console.log statement? You MUST explain WHY.
+```javascript 
+let x = 10;
+let y = '10';
+console.log(x == y);     // the output: true  because here there is a loosey equal operator 
+console.log(x === y);    // the output: false  because here there is a strict equal operator 
+```
 
+#### QUESTION #5:
+Given the code below:
+
+What is the value of result? You MUST explain the steps of evaluation taken by JS
+```javascript 
+let num = "15";
+let isPositive = true;
+let result = (num > 10 && isPositive) || num < 0;
+console.log(result);
+//  the output: true
+// explanation: beacuse of the use of the logical OR operator "||" in which if one of the options is met, the output is true
+```
 
 
 
