@@ -10,7 +10,7 @@ Value is a unit of info that have certain characteristics (data).
 
  ### Primitive data type
  It includes strings, numbers, boolean, undefined, and null.
-We can use ```typeOf``` to return a string that indicates the type of values in js. 
+We can use ``` typeof ``` to return a string that indicates the type of values in js. 
 
 #### String: is a textual data type that can be represented using back text, single quote, or double quotes such as "Hello".
 #### Number: is an integer or long integer such as 23.
@@ -21,55 +21,55 @@ We can use ```typeOf``` to return a string that indicates the type of values in 
 
 ## Exercise  
 #### Define the type of the value: 
-```false```   Boolean 
+``` false ```   Boolean 
 
-```“true” ```  string
+``` “true” ```  string
 
-```document.title ```   string 
+``` document.title ```   string 
 
-```“some string”.length```    number 
+``` “some string”.length ```    number 
 
-```Null```    null despite of the fact that in the console it returns its type as an object  
+``` Null ```    null despite of the fact that in the console it returns its type as an object  
 
 ## Strings 
 Strings are made up of smaller units of text called characters that spin together to form a word ,a sentence or emoji etc.
 
 #### Some features with strings
-#### 1st: ```indexOf()``` 
+#### 1st: ``` indexOf() ``` 
 ```indexOf()``` is used to return the index of the first appearance of a specific character in a string 
 Example:
-```“Hello”.indexOf(“e”)```  //the output: 1
-```“Hello”.indexOf(“l”)```  //the output: 2
+``` “Hello”.indexOf(“e”) ```  //the output: 1
+``` “Hello”.indexOf(“l”) ```  //the output: 2
 
 #### Case sensitive
 if I ask for a lower case while I have uppercase it returns -1
 
 If I ask to get the index of an inexistent character in a string eg “Hello”.indexOf(“c”) the result is -1
 
-#### 2nd: ```includes()``` 
+#### 2nd: ``` includes() ``` 
 
 ```includes()```  returns a Boolean of true or false of the existen characters.
 #### Example:
- ```“Hello”.includes(“lo”)``` //the output: true 
-```“Hello”.includes(“lol”)```  //the output: false
+ ``` “Hello”.includes(“lo”) ``` //the output: true 
+``` “Hello”.includes(“lol”) ```  //the output: false
 
-#### 3rd: ```startWith()```
+#### 3rd: ``` startWith() ```
 
 ```startWith()``` returns a Boolean of true or false of the first characters in a string.
 #### Example:
- ```“Hello”.startWith(”He”)``` //the output: true
+ ```“Hello”.startWith(”He”) ``` //the output: true
 ```“Hello”.startWith(”lo”)```  //the output: false
 
-#### 4th: ```toLowerCase()``` or ```toUpperCase```
-```toLowerCase()```  it gives the lowercase version of the given string
+#### 4th: ``` toLowerCase() ``` or ``` toUpperCase ```
+``` toLowerCase() ```  it gives the lowercase version of the given string
 
-```toUpperCase``` it gives the uppercase version of the given string
+``` toUpperCase ``` it gives the uppercase version of the given string
 
 #### Note1:
 We can ask for the index of substrings that have multiple characters 
 Using indexOf with multiple characters:
-```“Hello”.indexOf(“lo”)```  returns 3 it represents the position of those character 
-```“Hello”.indexOf(“lol”)```   returns -1
+``` “Hello”.indexOf(“lo”) ```  returns 3 it represents the position of those character 
+``` “Hello”.indexOf(“lol”) ```   returns -1
 
 #### Note2: we can concatenate strings using + operator
 
@@ -107,30 +107,38 @@ document.querySelector("header h1").textContent=upperHeader
 
 ``` + ```for add
 
-``` -``` for aubtract
+``` - ``` for aubtract
 
-``` *``` for multiply 
+``` * ``` for multiply 
 
-``` /``` for divide
+``` / ``` for divide
 
 ## Comparison Operators
-``` >``` greater than
+``` > ``` greater than
 
-``` <``` less than 
+``` < ``` less than 
 
-``` >=``` greater than or equal to
+``` >= ``` greater than or equal to
 
-``` <=``` less than or equal to
+``` <= ``` less than or equal to
 
 ## Equality Operators
 
-```===``` strict equal operator
+``` === ``` strict equal operator
 
-```==``` loosey-goosey equal operator
+``` == ``` loosey-goosey equal operator
 
-```!==``` strict unequal operator
+``` !== ``` strict unequal operator
 
-```!=``` loosey-goosey unequal operator
+``` != ``` loosey-goosey unequal operator
+
+## OR, AND and ++ operators:
+ The logical OR is represented by ``` || ```
+
+The logical AND operator is represented by ``` && ```
+
+To increment the counter by 1, we use the operator ``` ++ ```
+
 
 ## Learning sprint (1), week (3), day (2) delieverables
 #### QUESTION #1
