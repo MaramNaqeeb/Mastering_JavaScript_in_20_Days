@@ -154,7 +154,7 @@ let d = "false";
 
 console.log(a == b);   // the output: true  because here there is a loosey equal operator 
 console.log(b === c);  // the output: false  because here there is a strict equal operator 
-console.log(!!d);      // the output: true    because !!  means the negeative of the negative which results in positive 
+console.log(!!d);      // the output: true    because !!truthy returns true
 ```
 #### QUESTION #2:
 Consider the following JavaScript expression:
