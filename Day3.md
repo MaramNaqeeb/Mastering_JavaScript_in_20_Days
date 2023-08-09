@@ -100,7 +100,7 @@ abcString[1]=”d”
 ```
 Will still “abc” with no errors because js in loosey 
 
-## ``` .concat() .vs ``` .push() ```
+## ``` .concat() ``` .vs ``` .push() ```
 ``` .concat() ```  does not change the original array but rather it returns a new array keeping the original one as it is. Thus, it returns to a new array. In other words, it creates a new copy of the array that gives a new thing.
 #### Example
 ```javascript
