@@ -1,7 +1,5 @@
 # Arrays and Variables
-In this file, I will define what array is and what methods we can use to deal with arrays.
-
-Also, I will demonstrate the differences between arrays and strings, let and const, push and concat, and between mutable and immutable values.
+In this file, I will define what array is and what methods we can use to deal with arrays. Also, I will demonstrate the differences between arrays and strings, let and const, push and concat, and between mutable and immutable values.
 
 ## Arrays  
 An array can be defined as keep multiple values together in a single collection(list).
@@ -55,7 +53,7 @@ The output: [1,2,3,4,5,6]
 
 ## Mutation
 
-#### Let .vs const
+- #### Let .vs const
 ``` let ``` can be reassigned while ``` const ``` cannot 
 #### Example 
  ```javascript
@@ -66,7 +64,8 @@ It will point to the new one and the value of x will become "new"
 
 while in the case of ``` const ``` an error will be thrown 
 
-However, when we assign a mutable value to a const varible, we can make changes to that value such as an array.
+- Assigning a mutable value to the const variable
+  When we assign a mutable value to a const varible, we can make changes to that value such as an array.
 
 #### Example:
 ```javascript
@@ -76,7 +75,30 @@ console.log(x)  // the output: [5,6]
 const newSum=x[0]+x[1]
 console.log(newSum) //the output:11 
 ```
-
+- assigning an array to another array results in making them point to the same array reference and if any change happens in one of them the other will be changed; they are dependent on each other.
+#### Example
+``` javascript
+let array1=[1,2,3]
+let array2=array1
+array1[0]=4
+array1   // the output: [4,2,3]
+array2   // the output:  [4,2,3]
+```
+- Arrays are mutable while strings are not
+  #### Example
+``` javascript
+let letters=[“a”,”b”,”c”]
+letters[1]=”d”
+d replaces b
+we reassigned the value in the index 1 with “d”
+[“a”,”d”,”c”]
+```
+While
+```javascript 
+Let abcString=”abc”
+abcString[1]=”d”
+```
+Will still “abc” with no errors because js in loosey 
 
 
 
