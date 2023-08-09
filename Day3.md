@@ -1,7 +1,7 @@
 # Arrays and Variables
 In this file, I will define what array is and what methods we can use to deal with arrays.
 
-Also, I will demonstrate the differences between arrays and strings, let and const, and between push and concat.
+Also, I will demonstrate the differences between arrays and strings, let and const, push and concat, and between mutable and immutable values.
 
 ## Arrays  
 An array can be defined as keep multiple values together in a single collection(list).
@@ -28,8 +28,39 @@ An array can be defined as keep multiple values together in a single collection(
  ``` let lastItem=fruits.pop() ``` "strawberry" will be removed
 
  - ``` .push() ``` to add an item to the end of an array
- - 
 #### Example:
 ``` let fruits=[“orange”,”apple”, “strawberry”] ```
  ``` let lastItem=fruits.pop("banana") ``` "banana" will be added
+
+ - ``` .sort() ``` to sort the strings alphabetically
+#### Example
+``` [“c”,”a”,”d”,”b”].sort() ```
+It sorts the strings alphabetically 
+The output: ``` [“a”,”b”,”c”,”d”] ```
+
+Note: ``` .sort() ``` function should be written in a different way when we deal with numbers.
+
+- ``` .join() ``` It joins the values in an array using a string joiner that we pass in.
+#### Example
+ ``` let animals=[“lion”,”tiger”,”bear”].join(“ & “) ```
+ The output: “lions & tigers & bears”
+Instead of:
+``` Animals[0]+” & “ +animals[1]+” & “ + animals[2] ```
+The output: “lions & tigers & bears”
+
+- ``` .concat() ``` It squishes/concatenates/ joins/merges two arrays together into a single array.
+#### Example
+``` [1,2,3].concat([4,5,6]) ```
+The output: [1,2,3,4,5,6]
+
+## Mutation
+
+#### Let .vs const
+``` let ``` can be reassigned while ``` const ``` cannot 
+#### Example 
+ ```javascript
+ let x=”let”
+ x=”new”
+```
+It will point to the new one and the value of x will become "new"
 
