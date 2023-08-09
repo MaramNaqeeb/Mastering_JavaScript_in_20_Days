@@ -1,5 +1,5 @@
 # Values and Data Types
-This chapter gives an overview of data types of values and focuses more on strings by introducing many functions do deal with strings. Moreover, it explains the diffrent operators used in JavaScript with some exercises.
+This chapter gives an overview of data types of values and focuses more on strings by introducing many functions do deal with strings. Moreover, it explains the diffrent operators used in JavaScript with some exercises. Also, it gives an introduces the variables, expressions, and statements in JavaScript.
 
 ### What is Value
 Value is a unit of info that have certain characteristics (data).
@@ -203,6 +203,40 @@ console.log(result);
 //  the output: true
 // explanation: beacuse of the use of the logical OR operator "||" in which if one of the options is met, the output is true
 ```
+
+## Variables
+
+#### Variables are not boxes that contain values but rather pointers to values.
+
+### ``` let ``` Keyword
+``` Let ```: is a keyword that let us declare variables in a block scope in which we can reassign its value. 
+The sign ``` = ```: is used to assign the variable to a value to the right
+``` ; ```: it is used at the end of the value to indicate the end of it.
+
+### Declaring Variables
+Declaring variables means that we just declare a name for a variable without giving it a value.
+
+#### Example: 
+``` let remember; ```
+
+So, the value of the variable remember is undefined in which it has no value in an undeliberate way. Unlike the null value, in which the value is null deliberately as in ``` let remember= null ```
+
+### ``` const ``` keyword
+
+Const is a keyword to declare a variable and assign a value for it in a block 
+
+scope but without being able to reassign or change the value assigned to the const variable.
+
+#### Example:
+``` const greeting=”Hello” ```
+
+Note: We can write the variable names in different forms such as Camel case such as validVariable(the convention way)
+
+Pascal case  such as ValidVariable
+
+Use underscore such as valid_variable
+
+But  we cannot start the name of the variable with numbers or emoji.
 
 
 
