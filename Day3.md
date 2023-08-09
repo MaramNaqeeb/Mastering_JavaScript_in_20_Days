@@ -108,9 +108,13 @@ let number2=[1,2,3];
 let result2=number2.concat([4])
 ```
 the output:
+
 result2=[1,2,3,4]
-While
+
+//While
+
 number2=[1,2,3]
+
 ``` .push() ``` changes the original array. Thus, it still points to the original array in which it returns the same array (manipulate that original array to be something else) it mutate the array or change the array in place.
 #### Example
 ```javascript
@@ -118,8 +122,11 @@ let number1=[1,2,3];
 let result1=number1.concat([4])
 ```
 the output:
+
 result1=[1,2,3,4]
-And 
+
+//And 
+
 number1=[1,2,3,4]
 
 
