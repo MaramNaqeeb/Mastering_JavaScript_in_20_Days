@@ -139,71 +139,6 @@ The logical AND operator is represented by ``` && ```
 
 To increment the counter by 1, we use the operator ``` ++ ```
 
-
-## Learning sprint (1), week (3), day (2) delieverables
-#### QUESTION #1
-Consider the following JavaScript code:
-
-What will be the output of each console.log statement? You MUST explain WHY.
-
-```javascript
-let a = 0;
-let b = "0";
-let c = false;
-let d = "false";
-
-console.log(a == b);   // the output: true  because here there is a loosey equal operator 
-console.log(b === c);  // the output: false  because here there is a strict equal operator 
-console.log(!!d);      // the output: true    because !!truthy returns true
-```
-#### QUESTION #2:
-Consider the following JavaScript expression:
-
-What will be the output of this expression? You MUST explain the steps of evaluation taken by JS.
-```javascript
-console.log(4 + 5 * "7");
-// the output: 9
-/* explanation: JS will multiply 5 by 7 without first as the multiplication is the strongest operation and
-then it adds 4 to the result of the multiplication and it does not care about the quotes around number 7
-*/
-```
-#### QUESTION #3:
-Evaluate the following expression:
-
-What will be the output of this expression? You MUST explain the steps of evaluation taken by JS.
-```javascript
-let result = 5 + 2 * 3 - 1;
-// the output: 10
-/* explanation: JS will multiply 2 by 3 first as multiplication is the strongest oparation and then it adds 5 to the
- result and then subtract 1 from the result as we the operators of the same level such as + and - work from left to right
-*/
-```
-
-
-#### QUESTION #4:
-Consider the following code:
-
-What will be the output of each console.log statement? You MUST explain WHY.
-```javascript 
-let x = 10;
-let y = '10';
-console.log(x == y);     // the output: true  because here there is a loosey equal operator 
-console.log(x === y);    // the output: false  because here there is a strict equal operator 
-```
-
-#### QUESTION #5:
-Given the code below:
-
-What is the value of result? You MUST explain the steps of evaluation taken by JS
-```javascript 
-let num = "15";
-let isPositive = true;
-let result = (num > 10 && isPositive) || num < 0;
-console.log(result);
-//  the output: true
-// explanation: beacuse of the use of the logical OR operator "||" in which if one of the options is met, the output is true
-```
-
 ## Variables
 
 #### Variables are not boxes that contain values but rather pointers to values.
@@ -257,10 +192,67 @@ let sum=1+2;
 - Conditional statements
 - For statements
 
+## Learning sprint (1), week (3), day (2) delieverables
+#### QUESTION #1
+Consider the following JavaScript code:
+
+What will be the output of each console.log statement? WHY?
+
+```javascript
+let a = 0;
+let b = "0";
+let c = false;
+let d = "false";
+
+console.log(a == b);   // the output: true  because here there is a loosey equal operator 
+console.log(b === c);  // the output: false  because here there is a strict equal operator 
+console.log(!!d);      // the output: true    because !!truthy returns true
+```
+#### QUESTION #2:
+Consider the following JavaScript expression:
+
+What will be the output of this expression? What are the steps of evaluation taken by JS?
+```javascript
+console.log(4 + 5 * "7");
+// the output: 9
+/* explanation: JS will multiply 5 by 7 without first as the multiplication is the strongest operation and
+then it adds 4 to the result of the multiplication and it does not care about the quotes around number 7
+*/
+```
+#### QUESTION #3:
+Evaluate the following expression:
+
+What will be the output of this expression? What are the steps of evaluation taken by JS?
+```javascript
+let result = 5 + 2 * 3 - 1;
+// the output: 10
+/* explanation: JS will multiply 2 by 3 first as multiplication is the strongest oparation and then it adds 5 to the
+ result and then subtract 1 from the result as we the operators of the same level such as + and - work from left to right
+*/
+```
 
 
+#### QUESTION #4:
+Consider the following code:
 
+What will be the output of each console.log statement? WHY?
+```javascript 
+let x = 10;
+let y = '10';
+console.log(x == y);     // the output: true  because here there is a loosey equal operator 
+console.log(x === y);    // the output: false  because here there is a strict equal operator 
+```
 
+#### QUESTION #5:
+Given the code below:
 
-
+What is the value of result? What are the steps of evaluation taken by JS?
+```javascript 
+let num = "15";
+let isPositive = true;
+let result = (num > 10 && isPositive) || num < 0;
+console.log(result);
+//  the output: true
+// explanation: beacuse of the use of the logical OR operator "||" in which if one of the options is met, the output is true
+```
 
