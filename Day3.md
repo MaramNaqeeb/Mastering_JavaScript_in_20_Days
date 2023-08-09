@@ -64,3 +64,19 @@ The output: [1,2,3,4,5,6]
 ```
 It will point to the new one and the value of x will become "new"
 
+while in the case of ``` const ``` an error will be thrown 
+
+However, when we assign a mutable value to a const varible, we can make changes to that value such as an array.
+
+#### Example:
+```javascript
+const x=[4,6]
+X[0]=5
+console.log(x)  // the output: [5,6]
+const newSum=x[0]+x[1]
+console.log(newSum) //the output:11 
+```
+
+
+
+
