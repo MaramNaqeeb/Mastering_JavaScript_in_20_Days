@@ -230,13 +230,36 @@ scope but without being able to reassign or change the value assigned to the con
 #### Example:
 ``` const greeting=”Hello” ```
 
-Note: We can write the variable names in different forms such as Camel case such as validVariable(the convention way)
+Note1: We can write the variable names in different forms such as:
+- Camel case such as validVariable(the convention way)
 
-Pascal case  such as ValidVariable
+- Pascal case  such as ValidVariable
 
-Use underscore such as valid_variable
+- Use underscore such as valid_variable
 
 But  we cannot start the name of the variable with numbers or emoji.
+
+Note2: We can use variables to hold some lines of code such as 
+Let title=document.querySelector(“h1”)
+
+### Statements vs expressions 
+
+Expressions are questions that ask js for a specific value while Statements   tell js to do something or assigning a value to an already declared variable.
+#### Example:
+#### expression:
+1+2
+#### statement:
+let sum=1+2;
+
+#### There are many statements in js which include:
+
+- Function statements
+- Conditional statements
+- For statements
+
+
+
+
 
 
 
