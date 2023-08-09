@@ -129,4 +129,6 @@ result1=[1,2,3,4]
 
 number1=[1,2,3,4]
 
+## Learning sprint (1), week (3), day (3) delieverables
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice
 
