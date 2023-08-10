@@ -1,5 +1,5 @@
 # Arrays and Variables
-In this file, I will define what array is and what methods we can use to deal with arrays. Also, I will demonstrate the differences between arrays and strings, let and const, push and concat, and between mutable and immutable values.
+In this file, I will define what array is and what methods we can use to deal with arrays. Also, I will demonstrate the differences between arrays and strings, let and const, push and concat ragarding mutation. Moreover, I will explain what object is and how to access its values and mutate it in addition to the nested objects and the built in objects.
 
 ## Arrays  
 An array can be defined as keep multiple values together in a single collection(list).
