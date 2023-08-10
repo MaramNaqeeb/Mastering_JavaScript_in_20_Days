@@ -118,15 +118,15 @@ console.log(“do you even lifts bro”)
 
 - ### Filter
       Filter calls a true/false function on each item and creates a new array with only the items where the function returns true.
-      ##### Example
-     ```javascript
+  ##### Example
+  ```javascript
      const spices =[
      {name:”Jane”, nickname:”Baby”},
      {name:”Ann”, nickname:”Ginger”},
      {name:”John”, nickname:”Scary”},
      ]
      const mels= spices.filter(s=>s.name.includes(“mel”));
-     ```
+  ```
 - ### Spread Operator ``` ... ```
   
    Spread operator takes items from an array and spread them around in which it makes a copy of an array. We can use it to expand an array by putting an array       inside another array.
