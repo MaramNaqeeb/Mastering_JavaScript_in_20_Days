@@ -70,6 +70,16 @@ function add(x,y){
 return x+y;
 }
 ```
+## Scope
+Scope defines where variables are in play(where variable are declared)
 
-
+The widest scoope is the global scope in which the variables in that scope are seen and accessed from any place in the programme.
+##### Example
+```javascript
+var sayHi="Hi"
+function greeting(){
+console.log(sayHi)
+}
+greeting()
+```
 
