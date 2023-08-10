@@ -116,7 +116,29 @@ console.log(“do you even lifts bro”)
     we can say:
     ``` const nicknames=spices.map(s => `s.nicknames  ${spices}`); ```
 
-
+- ### Filter
+      Filter calls a true/false function on each item and creates a new array with only the items where the function returns true.
+      ##### Example
+     ```javascript
+     const spices =[
+     {name:”Jane”, nickname:”Baby”},
+     {name:”Ann”, nickname:”Ginger”},
+     {name:”John”, nickname:”Scary”},
+     ]
+     const mels= spices.filter(s=>s.name.includes(“mel”));
+     ```
+- ### Spread Operator ``` ... ```
+  
+   Spread operator takes items from an array and spread them around in which it makes a copy of an array. We can use it to expand an array by putting an array       inside another array.
+  
+      ##### Example
+      ```javascript
+      const num1=[1,2,3]
+      const num2=[4,5,6]
+      const nums=[…num1,…num2]
+      //which is the equivalent to 
+      const nums=num1.concat(num2)
+      ```
 
 
 
