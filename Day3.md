@@ -223,6 +223,8 @@ To find out the built in values nested in document we simply can write document 
 
 ### ``` .push() ``` in arrays
 To find out the built in methods in arrays we  simply can write Array.prototype in our console, or use the reference MDN 
+
+### ``` console ``` and ``` clear()```
 ```javascript
 console.log() is a built in js
 console.warn()
