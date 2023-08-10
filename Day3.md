@@ -188,7 +188,54 @@ console.log(“Hi”)
 Dog.speak()
 //The output: Hi Ein
 ```
+## Nested Objects
+Nested object: is an object inside another object that behaves as a value of the other object.
+#### Example
+```javascript
+var obj1={
+  obj2:  {
+   name:"John",
+   age:12
+  }
+}
+//To access the name we say:
+obj1.obj2.name
+```
+#### We can have objs inside an array and an array inside an obj 
+#### Example
+```javascript
+const spices=[
+{name:”Ema”,nickname:”Baby”},
+{name:”John”,nickname:”Sporty”},
+{name:”Jimy”,nickname:”Scary”},
+]
 
+Const spiceGirl={
+Albums:[“spices”,”spiceworld”,”forever”],
+Motto:”Girl Power”,
+Members:spices  //it indicates to the previous array
+}
+```
+## Built in objects
+### ``` document ```
+``` document.title=”tic tac toe” ```
+To find out the built in values nested in document we simply can write document in our console, or use the reference MDN 
+
+### ``` .push() ``` in arrays
+To find out the built in methods in arrays we  simply can write Array.prototype in our console, or use the reference MDN 
+```javascript
+console.log() is a built in js
+console.warn()
+console.error()
+clear()
+```
+### ``` Math  ``` to get some math related functions and constants
+#### Examlpe
+```javascript
+Math.PI  
+//the output: 3.141592653589793
+Math.random() // that gives a random value between 0 and 1 
+```
 
 ## Learning sprint (1), week (3), day (3) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice
