@@ -141,7 +141,9 @@ console.log(“do you even lifts bro”)
      
      ```
 
-
+## Learning sprint (1), week (3), day (5) delieverables
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-multiple-conditional-ternary-operators
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array
 
 
 
