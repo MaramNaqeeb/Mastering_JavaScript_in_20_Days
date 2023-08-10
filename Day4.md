@@ -114,7 +114,7 @@ the output : “Hello”  //because of reassining, so the variable will point to
 - Var is declared in the function scope or global scope, so they are accessed from outside the block scope
 - Let is declared in the block scope such as for statement, if statement, and the code inside {}.
   
-## Learning sprint (1), week (3), day (3) delieverables
+## Learning sprint (1), week (3), day (4) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-scope-and-functions
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/local-scope-and-functions
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-vs--local-scope-in-functions
