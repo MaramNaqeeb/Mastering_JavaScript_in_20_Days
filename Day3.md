@@ -220,21 +220,21 @@ Members:spices  //it indicates to the previous array
 }
 ```
 ## Built in objects
-### ``` document ```
+- ### ``` document ```
 ``` document.title=”tic tac toe” ```
 To find out the built in values nested in document we simply can write document in our console, or use the reference MDN 
 
-### ``` .push() ``` in arrays
+- ### ``` .push() ``` in arrays
 To find out the built in methods in arrays we  simply can write Array.prototype in our console, or use the reference MDN 
 
-### ``` console ``` and ``` clear()```
+- ### ``` console ``` and ``` clear()```
 ```javascript
 console.log() is a built in js
 console.warn()
 console.error()
 clear()
 ```
-### ``` Math  ``` to get some math related functions and constants
+- ### ``` Math  ``` to get some math related functions and constants
 #### Examlpe
 ```javascript
 Math.PI  
