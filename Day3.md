@@ -178,7 +178,7 @@ indecisive.snack=”chips”
 The output:
 { lunch:”sandwishes”, snack:”chips”}
 
-## Function Property in Objects
+## Function Property in Objects(methods)
 Properties in objects can be functions that do something by using () after the name of the function.
 #### Example
 ```javascript
@@ -189,6 +189,19 @@ console.log(“Hi”)
      }
 }
 Dog.speak()
+//The output: Hi Ein
+```
+## ``` this ``` keyword
+``` this ``` keyword refers to the current object.  
+#### Example
+```javascript
+const dog={
+name:”Ein”,
+speak:function (){
+console.log(“Hi”,this.name)
+}
+}
+dog.speak()
 //The output: Hi Ein
 ```
 ## Nested Objects
