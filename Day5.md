@@ -95,4 +95,32 @@ console.log(“now doing rep”, rep);
 }
 console.log(“do you even lifts bro”)
 ```
+## Method with Arrays
+- ### Map
+  Map takes an array and a function and calls that function on each item in the array. Instead of mutating the original array, it gives a new array with the result the function called on each item in the array.
+    ##### Example
+  ```javascript
+    const spices =[
+    {name:”Jane”, nickname:”Baby”},
+    {name:”Ann”, nickname:”Ginger”},
+    {name:”John”, nickname:”Scary”},
+    ]
+    const nicknames=spices.map(s => s.nicknames+ “spices”);
+    ```
+    #### string template literals 
+    We can use the back ticks ``` `` ``` to insert different variables inside a string using ${variable} instead of using + operator 
+    ##### Example
+    instead of 
+    ``` const nicknames=spices.map(s => s.nicknames+ “spices”); ``` 
+    
+    we can say:
+    ``` const nicknames=spices.map(s => `s.nicknames  ${spices}`); ```
+
+
+
+
+
+
+
+
 
