@@ -129,7 +129,7 @@ result1=[1,2,3,4]
 
 number1=[1,2,3,4]
 
-# Objects
+## Objects
 An object is a collection of properties that point to values of diffrent data types.
 #### Example:
 ```javascript
@@ -152,7 +152,7 @@ OR
 
 #### Objects are mutable like Arrays:
 
-We can reassign the properties point to a diff value in the obj new value
+- We can reassign the properties point to a diff value in the obj new value
 #### Example
 ```javascript
 const indecisive={
@@ -163,6 +163,32 @@ let lunch=”tacos”
 
 indecisive.lunch  //the output: "tacos"
 ```
+- We can also assign/add a new property to the object.
+
+#### Example:
+``` javascript
+const indecisive={
+lunch:”sandwishes”
+}
+indecisive.snack=”chips”
+```
+The output:
+{ lunch:”sandwishes”, snack:”chips”}
+
+## Function Property in Objects
+Properties in objects can be functions that do something by using () after the name of the function.
+#### Example
+```javascript
+const dog={
+name:”Ein”,
+speak:function (){
+console.log(“Hi”)
+     }
+}
+Dog.speak()
+//The output: Hi Ein
+```
+
 
 ## Learning sprint (1), week (3), day (3) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice
