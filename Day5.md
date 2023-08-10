@@ -131,14 +131,15 @@ console.log(“do you even lifts bro”)
   
    Spread operator takes items from an array and spread them around in which it makes a copy of an array. We can use it to expand an array by putting an array       inside another array.
   
-      ##### Example
-      ```javascript
+   ##### Example
+     ```javascript
       const num1=[1,2,3]
       const num2=[4,5,6]
       const nums=[…num1,…num2]
       //which is the equivalent to 
       const nums=num1.concat(num2)
-      ```
+     
+     ```
 
 
 
