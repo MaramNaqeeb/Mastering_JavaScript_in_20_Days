@@ -1,5 +1,5 @@
 # Functions, Events & Handlers
-This file gives an idea about functions in javascript showing its syntax. Also, It explians scopes in javascript and diffrentiate var from let regarding scoping. In addition, this file illustrate event listeners and event objects with some exercises.
+This file gives an idea about functions in javascript showing its syntax, differentiating between parameters and argument and demonstrating arrow function. Also, It explians scopes in javascript and diffrentiate var from let regarding scoping. In addition, this file illustrate event listeners and event objects with some exercises.
 
 ## Functions
 while values are things, and variables point to things, Functions do things. Thus, functions are a block of code that returns something.
@@ -28,3 +28,48 @@ add(2,3)
 ```
 In the above example x and y are parameters of the function (as pseudo variables), while 2 and 3 are the arguments 
 passed to the function(the actual values of the function) that are get assigned to the parameters x and y that we described when created the function.
+
+Note: Some functions do not need any parameters 
+##### Example
+```javascript
+function getRandomNumber(){
+return Math.random();
+}
+getRandomNumber();
+```
+## JS is loosey about missing/extra arguments
+If we use miss an arguments of a parameter in a function, js does not through an error but rather returns NAN because the missing argument will have the value of undefined in which adding some values to undefined values returns NAN because js is loosey about the arguments of functions.
+
+##### Example
+```javascript
+function add3(x,y,z){
+    return x+y+z;
+}
+add3(1,2)
+//the output: NaN
+```
+However, if we pass an additional argument, js does not care and the output will stay the same because js loosey about the arguments of functions.
+##### Example
+```javascript
+function getRandomNumber(){
+return Math.random();
+}
+getRandomNumber(“Hi”); // the output will be a random number between 0 and 1
+
+```
+## Arrow Function
+Arrow function is named arrow because of its symbol ``` => ```  which is as an arrow.
+
+Arrow function is defined as snonymus /unnamed function that does not have much code.
+
+##### Example
+```javascript
+cost add=(x,y)=>x+y;
+//Which is the same as:
+function add(x,y){
+return x+y;
+}
+```
+
+
+
