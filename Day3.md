@@ -1,5 +1,5 @@
 # Arrays, Objects, and Variables
-In this file, I will define what array is and what methods we can use to deal with arrays. Also, I will demonstrate the differences between arrays and strings, let and const, push and concat ragarding mutation. Moreover, I will explain what object is and how to access its values and mutate it in addition to illustrating ``` this ``` keyword, the nested objects, and the built in objects.
+In this file, I will define what array is and what methods we can use to deal with arrays. Also, I will demonstrate the differences between arrays and strings, let and const, push and concat ragarding mutation. Moreover, I will explain what object is and how to access its values and mutate it in addition to illustrating ``` this ``` keyword, the nested objects, and the built in objects. Furthermore, I will give an idea about a project that is entitled "Quiz Project" in which I will introduce some statement in javascript as a start of the project.
 
 ## Arrays  
 An array can be defined as keep multiple values together in a single collection(list).
@@ -254,7 +254,34 @@ Math.PI
 //the output: 3.141592653589793
 Math.random() // that gives a random value between 0 and 1 
 ```
+## "Quiz Project"
+This project is a quiz of true or false questions with an explanation of the answers whether they are true or false.
+#### Some Command Lines of the Start of the Project
+```javascript
+// TODO 1: Declare & assign variables pointing to the corresponding element(s)
+// statement should be the "statement" div
+// optionButtons should be all the elements within the "options" div
+// explanation should be the "explanation" div
 
+const statement=document.getElementById("statement");
+const optionButtons=document.querySelector("#options").childern;
+// or const optionButtons=document.querySelectorAll("#options button") 
+const explanation=document.getElementById("explanation");
+
+// TODO 2: Declare & assign a variable called fact
+// Its value should be an object with a statement, true/false answer, and explanation 
+    
+const fact={
+statement:"'1'+'1'==='2'",
+asnwer:'false',//or false without " "
+explanation:"'1'+'1'='11' because of the plus operator of concatenation "
+}
+
+// TODO 3: Set the text of the statement element to the fact's statement
+
+statement.textContent=fact.statement;
+
+```
 ## Learning sprint (1), week (3), day (3) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/combine-arrays-with-the-spread-operator
