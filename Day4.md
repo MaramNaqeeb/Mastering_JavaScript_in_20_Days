@@ -73,6 +73,8 @@ return x+y;
 ## Scope
 Scope defines where variables are in play(where variable are declared)
 
+## Types of Scopes
+### - The global scope
 The widest scoope is the global scope in which the variables in that scope are seen and accessed from any place in the programme.
 ##### Example
 ```javascript
@@ -82,4 +84,16 @@ console.log(sayHi)
 }
 greeting()
 ```
+### - The narrow scope(function scope)
+The varibles are declared inside the function in which the variables are not seen or accessed from outside their function
+##### Example
+```javascript
+let globalVar="I am a global variable"
+function narrowScope(){
+console.log(globalVar)
+let localVar="I am a local variable"
+}
 
+narrowScope() // the output: "I am a global variable"
+console.log(localVar) //js will through an error as js cannot access the local variable "localVar" from outside the function
+```
