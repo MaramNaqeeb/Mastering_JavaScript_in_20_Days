@@ -97,3 +97,22 @@ let localVar="I am a local variable"
 narrowScope() // the output: "I am a global variable"
 console.log(localVar) //js will through an error as js cannot access the local variable "localVar" from outside the function
 ```
+## Reassigning the variable of ``` let ```
+We can declare variables with let in the global scope and then modify them in the narrow scope, through reassigning it in the narrow scope, but this is dangerous. 
+#### Examlple
+```javascript
+let sayingHi=”hi”;
+function greeting(){
+sayingHi=”Hello”;
+}
+greeting()
+console.log(sayingHi)
+```
+the output : “Hello”  //because of reassining, so the variable will point to “Hello” instead of “Hi” 
+
+## ``` var ``` .vs ``` let ```
+- Var is declared in the function scope or global scope, so they are accessed from outside the block scope
+- Let is declared in the block scope such as for statement, if statement, and the code inside {}.
+
+
+
