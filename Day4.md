@@ -113,7 +113,25 @@ the output : “Hello”  //because of reassining, so the variable will point to
 ## ``` var ``` .vs ``` let ```
 - Var is declared in the function scope or global scope, so they are accessed from outside the block scope
 - Let is declared in the block scope such as for statement, if statement, and the code inside {}.
-  
+## Events and Handlers
+### addEventListener
+AddEventListener is a method that lets us listen for events on a DOM 
+
+##### Example
+```javascript
+document.addEventListener(“click”,function (){
+Console.log(“clicked”)
+});
+```
+"click" is the event while the function is a call back function or what we call an event handler
+
+
+### Events’ examples:
+- “click”
+- “dblclick”
+- “mouseover”
+- “mouseout”
+
 ## Learning sprint (1), week (3), day (4) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-scope-and-functions
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/local-scope-and-functions
