@@ -150,6 +150,9 @@ OR
 
 ``` js["name"] ```   the output: “javascript” //do not forget the " " inside the []
 
+Note: We name the properties of object using string while in arrays we name properties numerically.Therefore, as we cam access a value of an object using [“property”], In arrays we can use [“index”] because arrays indeed are objects.
+
+
 #### Objects are mutable like Arrays:
 
 - We can reassign the properties point to a diff value in the obj new value
