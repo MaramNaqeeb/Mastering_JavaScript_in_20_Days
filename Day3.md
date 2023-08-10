@@ -1,5 +1,5 @@
-# Arrays and Variables
-In this file, I will define what array is and what methods we can use to deal with arrays. Also, I will demonstrate the differences between arrays and strings, let and const, push and concat ragarding mutation. Moreover, I will explain what object is and how to access its values and mutate it in addition to the nested objects and the built in objects.
+# Arrays, Objects, and Variables
+In this file, I will define what array is and what methods we can use to deal with arrays. Also, I will demonstrate the differences between arrays and strings, let and const, push and concat ragarding mutation. Moreover, I will explain what object is and how to access its values and mutate it in addition to ilustrating the nested objects and the built in objects.
 
 ## Arrays  
 An array can be defined as keep multiple values together in a single collection(list).
@@ -128,6 +128,41 @@ result1=[1,2,3,4]
 //And 
 
 number1=[1,2,3,4]
+
+# Objects
+An object is a collection of properties that point to values of diffrent data types.
+#### Example:
+```javascript
+const js={
+name=”javascript,
+isAwesume: true,
+birthYear:1995,
+creator: “Brendan Eich”
+}
+```
+
+##### Note: do not forget the comma between one property and its value and the other in the obj to separate them.
+
+### To access the javascript value we write the following line:
+``` js.name```    the output: “javascript”
+
+OR
+
+``` js["name"] ```   the output: “javascript” //do not forget the " " inside the []
+
+#### Objects are mutable like Arrays:
+
+We can reassign the properties point to a diff value in the obj new value
+#### Example
+```javascript
+const indecisive={
+lunch:”sandwishes”
+}
+
+let lunch=”tacos” 
+
+indecisive.lunch  //the output: "tacos"
+```
 
 ## Learning sprint (1), week (3), day (3) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice
