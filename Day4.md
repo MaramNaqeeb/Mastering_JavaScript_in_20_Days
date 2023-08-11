@@ -72,14 +72,14 @@ return x+y;
 ```
 ## "Quiz Project"
 This project is a quiz of true or false questions with an explanation of the answers whether they are true or false.
-### The command lines to continue the project (declaring functions to disable and enable a button)
+#### The command lines to continue the project (declaring functions to disable and enable a button)
 ```javascript
 const disable = (disabledButton) => {
 disabledButton.setAttribute("disabled", " ");
 };
 const enable = (button) => disabledButton.removeAttribute("disabled");
 ```
-### The command lines to to declare isCorrect (guess) functions to compare a guess string to your fact's answer string
+#### The command lines to to declare isCorrect (guess) functions to compare a guess string to your fact's answer string
 ```javascript
 function isCorrect(myGuess){
 return myGuess=fact.answer;
