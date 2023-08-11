@@ -79,6 +79,13 @@ disabledButton.setAttribute("disabled", " ");
 };
 const enable = (button) => disabledButton.removeAttribute("disabled");
 ```
+### The command lines to to declare isCorrect (guess) functions to compare a guess string to your fact's answer string
+```javascript
+function isCorrect(myGuess){
+return myGuess=fact.answer;
+}
+```
+
 ## Scope
 Scope defines where variables are in play(where variable are declared)
 
