@@ -1,5 +1,5 @@
-# Data Fetching, Promises, Destructuring, Asynch, & Modules
-This file is a bit heavy in which it introduces some important and a bit complicated concepts in javascript. First of all, I will show how to fetch data using API, and how to get the values from that API using promises. Moreover, I will illiustrate what is destracturing and how we can implement it. Then, I will go more deeply in asynch and finally I will demonstrate how we can organize our code into files using modules.
+# Data Fetching, Promises, Destructuring, Async, & Modules
+This file is a bit heavy in which it introduces some important and a bit complicated concepts in javascript. First of all, I will show how to fetch data using API, and how to get the values from that API using promises. Moreover, I will illiustrate what is destracturing and how we can implement it. Then, I will go more deeply in async and finally I will demonstrate how we can organize our code into files using modules.
 
 
 ## Data Fetching (APIs)
