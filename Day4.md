@@ -72,7 +72,7 @@ return x+y;
 ```
 ## "Quiz Project"
 This project is a quiz of true or false questions with an explanation of the answers whether they are true or false.
-### The command lines to continue the project (adding a disabled and enabled buttons)
+### The command lines to continue the project (declaring functions to disable and enable a button)
 ```javascript
 const disable = (disabledButton) => {
 disabledButton.setAttribute("disabled", " ");
