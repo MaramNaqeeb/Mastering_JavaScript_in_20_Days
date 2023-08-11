@@ -70,11 +70,20 @@ function add(x,y){
 return x+y;
 }
 ```
+## "Quiz Project"
+This project is a quiz of true or false questions with an explanation of the answers whether they are true or false.
+### The command lines to continue the project (adding a disabled and enabled buttons)
+```javascript
+const disable = (disabledButton) => {
+disabledButton.setAttribute("disabled", " ");
+};
+const enable = (button) => disabledButton.removeAttribute("disabled");
+```
 ## Scope
 Scope defines where variables are in play(where variable are declared)
 
 ## Types of Scopes
-### - The global scope
+- ### The global scope
 The widest scoope is the global scope in which the variables in that scope are seen and accessed from any place in the programme.
 ##### Example
 ```javascript
@@ -84,7 +93,7 @@ console.log(sayHi)
 }
 greeting()
 ```
-### - The narrow scope(function scope)
+- ### The narrow scope(function scope)
 The varibles are declared inside the function in which the variables are not seen or accessed from outside their function
 ##### Example
 ```javascript
