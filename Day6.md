@@ -282,10 +282,12 @@ displays a list of characters.
 
 #### Screenshots of the web page:
 
-![picture1](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/ed80006f-87d8-4496-91ab-9f00ea4bf4c0)
+
+![picture1](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/70f70889-bdc0-4ac4-91a7-5ee5a7559191)
 
 
-![picture2](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/e741b386-07df-4815-9874-6cd526f7dc6b)
+
+![picture2](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/ed984a32-42ba-415a-87c4-d99840305383)
 
 
 
