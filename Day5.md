@@ -170,7 +170,56 @@ This project is a quiz of true or false questions with an explanation of the ans
       const nums=num1.concat(num2)
      
      ```
+     
+## While Loop
+while loop let us to running a chunck of code until a certain condition within the loop is no longer true
+##### Example
+```javascript
+let fiveRandomNumber=[]
+while(fiveRandomNumber.length<5){
+fiveRandomNumber.push(Math.random())
+}
+```
+## Doggo Game
+This game is a game of multiple choices in which it is a good application of while loop.
+#### The command line to start the game:
+```javascript
 
+    // TODO 1
+    // Given an array of possible answers, a correct answer value, and a number of choices to get,
+    // return a list of that many choices, including the correct answer and others from the array
+    function getMultipleChoices(n, correctAnswer, array) {
+        // Use a while loop and the getRandomElement() function
+        // Make sure there are no duplicates in the array
+        const choices=[]
+        choices.push(correctAnswer)
+        while(choices.length<n){
+            let candidate=getRandomElement(possibleChoices);
+            if(!choices.includes(candidate)){
+                choices.push(candidate)
+            }
+        }
+        return shuffleArray(choices)
+
+    }
+```
+## SetTimeOut()
+Time in javascript is asynchronous which means at a different time (not at a same time).
+
+If we want to run a code that takes a long time such as asking a user to pick a file, waiting for user events, getting permission to access the camera/mic, and loading data from the interwebs, but we do not want to wait a long time to execute the program we need to use an asynchronous function.
+
+JavaScript uses an asynchronous function called setTimeOut() that has a call back function to be excuted after an X milliseconds of time. So js keep running the rest of the code while the code in the setTimeout function is working without blocking/stoping the program. 
+##### Example
+```javascript
+console.log(“This will print first”)
+setTimeOut(() =>console.log(“This will print third”),1000);
+console.log(“This will print second”);
+```
+### Useful Resources for asynchronous functions:
+- ##### MDN
+- ##### Philip Robers
+
+ 
 ## Learning sprint (1), week (3), day (5) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-multiple-conditional-ternary-operators
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array
