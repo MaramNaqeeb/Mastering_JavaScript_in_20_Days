@@ -239,6 +239,24 @@ console.error()
     We can insert the debugger keyword in which it creates a break point or a pause in the js program and if there is a bug js will pause there. Another way to use the browser debugger is by clicking on the number of the code line that we want to debug. So, there are two ways to set the break point.
   
     Note: There are buttons there for going to the next line, to the next function, and to keep running the code.
+## Error Handling
+We can handle errors in js through using ``` try ```  and ``` catch ``` blocks that try something that might throw an error. I everything is working well, the code inside the try will be run, but if there is an error, the code inside the catch will be run.
+##### Example
+```javascript
+try{
+thisMightThrowAnError();
+}catch(error){
+console.error (“As if! Error: “, error);
+console.log(“whatever, let’s press on anyway”):
+}
+console.log(“still rollin’ with the homies);
+```
+
+## Frameworks .vs vanilla
+- Vanilla JavaScript is a pure or plain js that does not have any additional libraries. 
+- Frameworks are made up of js libraries such as React, Angual, and Vue.
+
+
 
 
 
