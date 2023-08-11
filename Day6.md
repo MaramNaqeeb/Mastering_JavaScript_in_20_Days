@@ -213,5 +213,18 @@ Back to our game
     const[imgUrl,correctAnswer,choices]= await loadQuizData();
     renderQuiz(imgUrl,correctAnswer,choices);
 ```
+## Modules
+Modules let us split big codebase across multiple files in order to make our code more organized.
+
+##### There are some differences between script and module
+- In script, we cannot use ``` await ``` outside a function, while in module we can.
+- In script, we can access the variables that are inside the script scope, while in module we cannot access the variables inside the module scope.
+#### ```import ``` & ``` export ```
+``` import ``` and ``` export ``` are used to use modules for splitting code into files(files talk to each other).
+``` export ``` pops some values up to another file, while ``` import ``` takes what the other file exports.
+##### The syntax of import 
+``` import { type what you want to import here} from "type the path of the file that you want to export from" ```
+
+
 
 
