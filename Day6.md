@@ -224,6 +224,15 @@ Modules let us split big codebase across multiple files in order to make our cod
 ``` export ``` pops some values up to another file, while ``` import ``` takes what the other file exports.
 ##### The syntax of import 
 ``` import { type what you want to import here} from "type the path of the file that you want to export from" ```
+## Debugging
+We can debug our code to know what is going on our code by printing it out in the console using some of the following code:
+```javascript
+console.log()
+//or
+console.warn()
+//or
+console.error()
+```
 
 
 
