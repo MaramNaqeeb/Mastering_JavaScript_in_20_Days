@@ -81,3 +81,7 @@ We can swap the symbols X and O from the app through the following command lines
 document.getElementById("p1-symbol").textContent="O"
 document.getElementById("p2-symbol").textContent="x"
 ```
+## Learning sprint (1), week (3), day (1) delieverables
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/compound-assignment-with-augmented-multiplication
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/concatenating-strings-with-the-plus-equals-operator
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/object-oriented-programming/use-dot-notation-to-access-the-properties-of-an-object
