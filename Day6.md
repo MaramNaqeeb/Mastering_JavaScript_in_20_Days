@@ -236,7 +236,7 @@ console.error()
 ```
 - #### Browser Debugger
   #### Browser debugger is a good feature inside the bowser that lets us see the whole source code.
-    We can insert the debugger keyword in which it creates a break point or a pause in the js program and if there is a bug js will pause there.
+    We can insert the debugger keyword in which it creates a break point or a pause in the js program and if there is a bug js will pause there. Another way to use the browser debugger is by clicking on the number of the code line that we want to debug.
   
     Note: There are buttons there for going to the next line, to the next function, and to keep running the code.
 
