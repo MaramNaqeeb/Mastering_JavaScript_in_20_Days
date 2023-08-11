@@ -122,3 +122,5 @@ Lets continue our Doggo game.
       return [subbreed, breed].join(" ").trim();
     }
 ```
+Note: We can reverse an array using destructuring or by using the method reverse().
+Note: We can remove the  white space  from both ends of a string by using the method trim().
