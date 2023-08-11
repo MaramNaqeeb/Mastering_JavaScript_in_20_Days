@@ -101,3 +101,24 @@ let [first,middle,last]=” Hello Hey Hi”.split(“ “)
 //The output: [“Hello”,”Hey”, “Hi”]
 ```
 So, by destructuring I can pull out each character separately 
+
+## Doggo Game
+Lets continue our Doggo game.
+#### The command lines:
+```javascript
+// TODO 2
+    let url =
+      "https://images.dog.ceo/breeds/poodle-standard/n02113799_2280.jpg";
+    // return the breed name string as formatted in the breed list, e.g. "standard poodle"
+    function getBreedFromURL(url) {
+      // The string method .split(char) may come in handy
+      // Try to use destructuring as much as you can
+
+      let unsplitBreed = url.split("/")[4];
+      //OR   let urlParts=url.split("/")
+      //         let splitter=url[4]
+
+      let joinBreed = unsplitBreed.split("_").join(" ");
+      return [subbreed, breed].join(" ").trim();
+    }
+```
