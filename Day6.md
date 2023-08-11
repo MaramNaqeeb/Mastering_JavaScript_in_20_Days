@@ -36,4 +36,20 @@ In the case of a promise, it waits for it to resolve before continuing with the 
 let response=await fetch(“https://dog.ceo/api/breed/hound/list”)
 console.log(response);
 ```
+When we put await before fetch it tells js to wait till it get the data form the url.
+### The body property in the url(to get the actual values)
+
+#### ``` await response.json() ```
+
+response.json() reads the data and parse it as a json obj. It gives asynchronous functions
+We put await in front of response.json() to get the actual values.So, We await the fetch and await the response.json()
+##### Example
+``` let body=await response.json(); ```
+
+This returns an object of the actual data we need
+
+#### ``` .then ```
+``` .then  ``` is another way to work with promises to get the values 
+
+``` .then (value)=>console.log(value) ```
 
