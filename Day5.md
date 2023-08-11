@@ -95,6 +95,36 @@ console.log(“now doing rep”, rep);
 }
 console.log(“do you even lifts bro”)
 ```
+
+## "Quiz Project"
+This project is a quiz of true or false questions with an explanation of the answers whether they are true or false.
+#### The command lines to continue the project (use for loop to attach an event listener to each button)
+    // TODO 7:Within the event handler function,
+    // Use a for loop to disable all the option buttons
+    // TODO 8: Within the event handler function,
+    // Get the guessed value from the clicked button
+    // Use a conditional to compare the guess to the fact's answer
+    // and add the "correct"/"incorrect" class as appropriate
+```javascript
+ for (let button of optionButtons) {
+      button.addEventListener("clcik", (event) => {
+        explanation.textContent = fact.explanation;
+
+
+
+        for (let oetherButton of optionButtons){
+          disable(oetherButton); //this will remember the function of disable button
+        }
+
+        if(isCorrect(button.value)){
+          button.classList.add("correct") //classlist to add a CSS class //correct is the name of the class that has a CSS style
+        }else{
+          button.classList.add("incorrect")
+        }
+      });
+    }
+
+```
 ## Method with Arrays
 - ### Map
   Map takes an array and a function and calls that function on each item in the array. Instead of mutating the original array, it gives a new array with the result the function called on each item in the array.
