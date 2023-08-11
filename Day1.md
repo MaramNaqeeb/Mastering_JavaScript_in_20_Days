@@ -81,37 +81,3 @@ We can swap the symbols X and O from the app through the following command lines
 document.getElementById("p1-symbol").textContent="O"
 document.getElementById("p2-symbol").textContent="x"
 ```
-## JavaScript Challenges
-#### 1st: Compound Assignment With Augmented Multiplication
-Instead of assigning the variable to itself and multiply it to a number, we can simply use the Compound Assignment With Augmented Multiplication which can be represented by *=
-
-##### Here is some examples:
-```javascript
-let a = 5;
-let b = 12;
-let c = 4.6;
-
-a *= 5; //instead of a = a * 5
-b *= 3; //instead of b = 3 * 3
-c *= 10; //instead of c = c * 10
-```
-#### 2nd: Concatenating Strings with the Plus Equals Operator
-We can concatinating strings using += operator at the end of an existing string variable.
-##### Example:
-```javascript
-let myString;
-myString="This is my first sentence."
-myString+="This is my second sentence"
-//The output: This is my first sentence. This is my second sentence.
-```
-#### 3rd: Use Bracket Notation to Find the Nth-to-Last Character in a String
-We can use bracket notation including the length of the string minus the number of the last character assigned.
-##### Example:
-###### Use bracket notation to find the second-to-last character in the lastName string.
-```javascript
-const lastName = "Lovelace";
-
-const secondToLastLetterOfLastName = lastName[lastName.length-2];
-//The output: c
-
-
