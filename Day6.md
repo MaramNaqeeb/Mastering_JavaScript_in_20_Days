@@ -225,7 +225,8 @@ Modules let us split big codebase across multiple files in order to make our cod
 ##### The syntax of import 
 ``` import { type what you want to import here} from "type the path of the file that you want to export from" ```
 ## Debugging
-We can debug our code to know what is going on our code by printing it out in the console using some of the following code:
+- #### Console
+    We can debug our code to know what is going on our code by printing it out in the console using some of the following code:
 ```javascript
 console.log()
 //or
@@ -233,6 +234,10 @@ console.warn()
 //or
 console.error()
 ```
+- #### Browser Debugger
+  #### Browser debugger is a good feature inside the bowser that lets us see the whole source code.
+    We can insert the debugger keyword in which it creates a break point or a pause in the js program and if there is a bug js will pause there.
+    Note: There are buttons there for going to the next line, to the next function, and to keep running the code.
 
 
 
