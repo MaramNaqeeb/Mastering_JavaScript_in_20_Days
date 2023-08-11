@@ -287,7 +287,7 @@ displays a list of characters.
 
 
 
-![picture2](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/ed984a32-42ba-415a-87c4-d99840305383)
+![picture 2](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/8b84f2fb-489b-489f-986b-fe05eaae3086)
 
 
 
