@@ -21,3 +21,21 @@ Whatever is top of the call stack (that’s the function we are currently runnin
 ## How functions in JavaScriot work
 
 When we add a function, its global parts go to the global memory, and its local parts go to the local memory, and the function itself goes to the lowest part of the call stack. When we execute the function and become in the execution context, the result of the function will be deleted from the local memory and it goes to the global memory so that we get the result of the function.
+
+##### Example
+```javascript
+Function  copyArrayMultiplyBy2 (array){
+Output=[]
+For(let i=0;i<array.length;i++){
+output.push(array*2);
+}
+Return output;
+}
+const myArray=[1,2,3];
+const result= CopyArrayMultiplyBy2(myArray);
+```
+
+![table1](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/8b5ae447-41a0-41c7-8c4c-132c02da1e7a)
+
+
+
