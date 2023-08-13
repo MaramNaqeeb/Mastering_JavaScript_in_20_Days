@@ -81,7 +81,7 @@ Developers care about time and the ability to reason about more than being able 
 ##### arrow function
 ``` function mutiplyBy2 = input => return input *2; ```
 
-## Par Programming
+## Pair Programming
 To grow as a software engineer, some engineers avoid blocks by research and read everything can find on a block/bug,  but others use code snippets from stackOverflow to fix a bug without knowing how they work. The effective thing is pair programming in which the engineer track blocks with a partner, stay focused on the problem, refine technical communication (verbalize their code), and collaborate to solve problem
 
 
