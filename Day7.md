@@ -1,5 +1,5 @@
-# Functions, Callbacks & Closure
-In this file, I will clarify how functions in JavaScript work and how to make them reusable. Also, I will explain callback functions and how they collaborate with the higher order function. In addition, I will explain a new function format called arrow function. Finally, I will deeply illustrate closure in JavaScript.
+# Functions & Callbacks
+In this file, I will clarify how functions in JavaScript work and how to make them reusable. Also, I will explain callback functions and how they collaborate with the higher order function. In addition, I will explain a new function format called arrow function.
 
 ## Functions
 A Function: is  code we save or define that can be run/executed later when we call it.
@@ -18,7 +18,7 @@ When we wun a function, we add it to  the call stack, when wefFinish running the
 
 Whatever is top of the call stack (that’s the function we are currently running
 
-## How functions in JavaScriot work
+## How functions in JavaScript work
 
 When we add a function, its global parts go to the global memory, and its local parts go to the local memory, and the function itself goes to the lowest part of the call stack. When we execute the function and become in the execution context, the result of the function will be deleted from the local memory and it goes to the global memory so that we get the result of the function.
 
