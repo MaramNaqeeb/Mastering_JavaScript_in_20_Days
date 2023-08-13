@@ -55,5 +55,35 @@ const result= CopyArrayMultiplyBy2([1,2,3],multiplyBy2)
 
 ![table2](https://github.com/MaramNaqeeb/Mastering_JavaScript_in_20_Days/assets/111737471/fbb41f9c-feb5-4fc9-97ed-38eae95735fb)
 
+#### In the example above: 
+The higher order function who has everything inside of and takes in and passes another function is CopyArrayMultiplyBy2
+The call back function that is inserted in another function is multiplyBy2
+
+Both higher order function and call back functions keep our code far more dry (do not repeat yourself)
+So we write the function one time and edit it after we save it because we left something a bit of it blank (we can edit the values and the code as well through the call back function)
+
+#### Functions are first class objects 
+Means that they can be treated just like objects
+- We pass a function as an argument
+- We can assign a function to a variable
+- We can return a function as a value from functions
+
+
+## Arrow Functions
+In ES6, to reduce code, this created legibility (nice and short) but not readability(for understanding the code). We can remove the parentheses of we have one input, and we can remove the word return. For regular functions it is recommended to use arrow functions, but for lexical scoped functions or call back functions we do as it is nice and short.
+
+Developers care about time and the ability to reason about more than being able to automatically garbage collecting when they save some memory. On these marginal cases, readability comes first.
+
+##### Example 
+
+#####regular function
+``` function mutiplyBy2(input) {return input *2;} ```
+##### arrow function
+``` function mutiplyBy2 = input => return input *2; ```
+
+## Par Programming
+To grow as a software engineer, some engineers avoid blocks by research and read everything can find on a block/bug,  but others use code snippets from stackOverflow to fix a bug without knowing how they work. The effective thing is pair programming in which the engineer track blocks with a partner, stay focused on the problem, refine technical communication (verbalize their code), and collaborate to solve problem
+
+
 
 
