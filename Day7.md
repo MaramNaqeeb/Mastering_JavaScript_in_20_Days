@@ -70,13 +70,13 @@ Means that they can be treated just like objects
 
 
 ## Arrow Functions
-In ES6, to reduce code, this created legibility (nice and short) but not readability(for understanding the code). We can remove the parentheses of we have one input, and we can remove the word return. For regular functions it is recommended to use arrow functions, but for lexical scoped functions or call back functions we do as it is nice and short.
+In ES6, arrow functions are used to reduce code, this created legibility (nice and short) but not readability(for understanding the code). We can remove the parentheses of we have one input, and we can remove the word return. For regular functions it is recommended to use arrow functions, but for lexical scoped functions or call back functions we do as it is nice and short.
 
 Developers care about time and the ability to reason about more than being able to automatically garbage collecting when they save some memory. On these marginal cases, readability comes first.
 
 ##### Example 
 
-#####regular function
+##### Regular function
 ``` function mutiplyBy2(input) {return input *2;} ```
 ##### arrow function
 ``` function mutiplyBy2 = input => return input *2; ```
