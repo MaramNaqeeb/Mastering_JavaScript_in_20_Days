@@ -89,7 +89,7 @@ To grow as a software engineer, some engineers avoid blocks by research and read
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs
   
 
-## Question 1: Functions and Callbacks
+### Question 1: Functions and Callbacks
 
 Implement a JavaScript function called mapAsync that takes an array and a callback function. 
 The function should map each element of the array to a new value using the callback function 
@@ -118,7 +118,7 @@ function myAsync(arr) {
 const myArray = [1, 2, 3];
 console.log(myAsync(myArray));
 ```
-## Question 2: Call Stack and Recursion
+### Question 2: Call Stack and Recursion
 
 Write a JavaScript function called sumRange that calculates the sum of all integers in a given range. 
 The function should use recursion to handle the calculation and demonstrate understanding of the call stack.
