@@ -46,5 +46,70 @@ myNewFun()
 myNewFun()
 ```
 
+Note: If there is no reference to the inner function which means that there is no point in the backpack (global memory) which causes memory leaks.
+memory leak: is using a space of the computer memory with a label that cannot be accessible or used anymore. As it is literally wasting space in the computer’s memory.
+
+## Backpack & Scoping
+Scope in JavaScript refers to the accessibility or visibility of variables and expressions. That means the space where an item, such as a variable or a function, is visible and accessible in your code.
+
+Scope: is the rule in any programming language for at a given line of code, and what data do I have available to me. In other words, so those rules protect data inside functions or block of code. Those rules called lexical or static scoping, Where I save in a function determines for the rest of that life, for the life of that function whenever it gets run under whatever new label it gets, what data it will have access to when that function runs.
+
+#### js is a  lexical statically  or scoped language
+
+That means that if I run the function out, the data the is grabbed inside the lexical scope will stay without getting deleted after running the function. Thus, in js closure, when you save a function inside another function, when it exits, the inner function does not get deleted, but rather it brings that data to the backpack(global memory), so when we run that function, it still has access to that persistent data from its backpack.
+Note: If I want to return more than one function from the outer execution, I can attach them with the backpack in an array format or object for methods.
+
+##### Therefore we can call data in js as: Persistent lexical static scoped referenced data (PLSRD)
+
+
+## Multiple closure instances
+I will explain Multiple closure instances through the following example:
+
+```javascript
+function outer(){
+let counter=0;
+function inner(){
+console.log(counter+=1)}
+return inner;
+}
+const myNewFun=outer()
+myNewFun()
+myNewFun()
+
+const anotherFun=outer()
+anotherFun ()
+anotherFun ()
+```
+##### the output: 1,2,1,2   because the backpack of myNewFun is different from the backback of anotherFun
+Explanation: Individual backpacks: if we run “outer” again the returned “inner” function definition in “anotherFun”, this new “inner” function was created in a new execution context and therefore has a brand new independent backpack.
+
+Note1: if there is no backpack of the outer execution, the output will be 1,1,1,1  because the value will be deleted in each call.
+Note2: If we declare the counter in the global scope outside the outer function as following:
+```javascript
+let counter=0;
+function outer(){
+
+function inner(){
+console.log(counter+=1)}
+return inner;
+}
+const myNewFun=outer()
+myNewFun()
+myNewFun()
+
+
+const myNewFun2=outer()
+myNewFun2()
+myNewFun2()
+```
+the output: 1,2,3,4 
+
+## Some benefits of using closure in js
+- Closure gives our functions persistent memories of their previous input output combinations
+- iterators and generators: use closure and lexical scoping to achieve the most contemporary patterns for handling data in js.
+- Node Module pattern: protect data inside the backpack.(use closure in the backpack)
+- Asynchronous js : callback and promises rely on closure
+
+
 
 
