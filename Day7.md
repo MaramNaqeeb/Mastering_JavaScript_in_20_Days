@@ -118,4 +118,22 @@ function myAsync(arr) {
 const myArray = [1, 2, 3];
 console.log(myAsync(myArray));
 ```
+## Question 2: Call Stack and Recursion
+
+Write a JavaScript function called sumRange that calculates the sum of all integers in a given range. 
+The function should use recursion to handle the calculation and demonstrate understanding of the call stack.
+
+```javascript
+function sumRange(arr) {
+  var sum = 0;
+
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+
+    sumRange(sum);
+  }
+}
+sumRange([1, 2, 3, 6, 9, 8]);
+```
 
