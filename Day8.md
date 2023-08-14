@@ -1,5 +1,5 @@
 # Closure
-In this file, I will explain the meaning of closure and when it is used. Also, I will illustrate what backPack is and what its benefit. 
+In this file, I will explain the meaning of closure, its benefits, and when it is used. Also, I will illustrate what backPack is and what its benefit. 
 
 ## What closure is
 closures are an important concept that allows functions to access variables from their outer lexical environment even after the outer function has finished executing. 
