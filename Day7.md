@@ -89,4 +89,33 @@ To grow as a software engineer, some engineers avoid blocks by research and read
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs
   
 
+## Question 1: Functions and Callbacks
+
+Implement a JavaScript function called mapAsync that takes an array and a callback function. 
+The function should map each element of the array to a new value using the callback function 
+asynchronously. 
+
+The final result should be returned as a Promise.
+```javascript
+function myAsync(arr) {
+  return new Promise((resolve, reject) => {
+    resolve(arr);
+    console.log("I am resolved");
+    reject(err);
+    console.log("An arror was found");
+  });
+
+  myAsynch().then(
+    (arr) => {
+      return arr;
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
+}
+
+const myArray = [1, 2, 3];
+console.log(myAsync(myArray));
+```
 
