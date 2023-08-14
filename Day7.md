@@ -84,6 +84,9 @@ Developers care about time and the ability to reason about more than being able 
 ## Pair Programming
 To grow as a software engineer, some engineers avoid blocks by research and read everything can find on a block/bug,  but others use code snippets from stackOverflow to fix a bug without knowing how they work. The effective thing is pair programming in which the engineer track blocks with a partner, stay focused on the problem, refine technical communication (verbalize their code), and collaborate to solve problem
 
-
+## Learning sprint (1), week (2), day (1) delieverables
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-problem
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs
+  
 
 
