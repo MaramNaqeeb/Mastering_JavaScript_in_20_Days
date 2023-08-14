@@ -106,9 +106,9 @@ the output: 1,2,3,4
 
 ## Some benefits of using closure in js
 - Closure gives our functions persistent memories of their previous input output combinations
-- iterators and generators: use closure and lexical scoping to achieve the most contemporary patterns for handling data in js.
-- Node Module pattern: protect data inside the backpack.(use closure in the backpack)
-- Asynchronous js : callback and promises rely on closure
+- Iterators and generators use closure and lexical scoping to achieve the most contemporary patterns for handling data in js.
+- Node Module pattern protects data inside the backpack.(use closure in the backpack)
+- Asynchronous js (callback and promises) relies on closure
 
 
 
