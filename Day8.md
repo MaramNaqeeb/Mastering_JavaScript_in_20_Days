@@ -1,5 +1,5 @@
 # Closure
-In this file, I will explain the meaning of closure, its benefits, and when it is used. Also, I will illustrate what backPack is and what its benefit. 
+In this file, I will explain the meaning of closure, its benefits, and when it is used. Also, I will illustrate what backPack is and what its benefit. Moreover, I will give an introduction of asynchronous in JavaScript. 
 
 ## What closure is
 closures are an important concept that allows functions to access variables from their outer lexical environment even after the outer function has finished executing. 
@@ -172,3 +172,35 @@ const myNewFun = composeFun(subtract, sum);
 myNewFun();
 //the output:10
 ```
+## Asynchronous in JavaScript
+Promises is the most significant feature in ES6 in which asynchronicity makes dynamic web applications possible, and creates event loop, callback queue and web browser features(APIs).
+
+In general, js is a single threaded language in which one command runs at a time. Also, js is a synchronous language, which means that it runs a line and finish it, then it runs the next line.
+
+##### Example
+```javascript
+const num=3;
+function mutiplyBy2(){
+const result=inputNumber*2;
+return result;
+}
+const output=mutiplyBy2(num);
+const newOutput= multiplyBy2(10)
+```
+In the above example, js will run the outout function first, then the newOutout.
+
+#### What if the program needs a long time to execute a certain command of code like fetching data from the server.
+##### Example
+```javascript
+function greeting(){
+    console.log("hi")
+}
+setTimeout(greeting, 1000)
+ console.log("first")
+//the out put: first  hi
+```
+In this case, js is not enough, so we need to use promises, API features, event loop, and callback in order to delay a function.
+Js is run in the browser,  so beside the js features such as console and dev tools, there are some features that are not js features which include,sockets, Network requests(which is called fetch that talks to the internet), rendering Document(HTML DOM) and Timer ( like setTimeOut). Therefore, we need js to use these features. In js, we have functions that are called facade functions, which look like js, but are actually fronts or facades for browser features.  Thus, a big part of what we are doing with js is not even js.
+
+
+
