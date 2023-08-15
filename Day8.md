@@ -111,5 +111,42 @@ the output: 1,2,3,4
 - Asynchronous js (callback and promises) relies on closure
 
 
+# Learning sprint (1), week (2), day (2) delieverables
 
+## Question 1:
 
+Write a closure named createCounter that takes an initial value start and returns a function. 
+The returned function, when invoked, should increment the counter by 1 and return the updated value.
+
+```javascript
+function createCounter() {
+  let counter = 0;
+  function incrementCounter() {
+    console.log(counter++);
+  }
+  return incrementCounter;
+}
+const myNewFun = createCounter();
+myNewFun();
+
+```
+## Question 2:
+
+Write a closure named calculateAverage that takes an array of numbers, nums, and returns a function. 
+The returned function, when invoked, should calculate and return the average of the numbers in the array.
+
+```javascript
+function createCounter() {
+  let arr = [1, 2, 3, 4, 5];
+  let sum = 0;
+  function incrementCounter() {
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i] / arr.length;
+    }
+    console.log(sum);
+  }
+  return incrementCounter;
+}
+const myNewFun = createCounter();
+myNewFun();
+```
