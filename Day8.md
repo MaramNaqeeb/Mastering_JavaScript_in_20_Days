@@ -138,15 +138,37 @@ The returned function, when invoked, should calculate and return the average of 
 ```javascript
 function createCounter() {
   let arr = [1, 2, 3, 4, 5];
-  let sum = 0;
+  let average = 0;
   function incrementCounter() {
     for (let i = 0; i < arr.length; i++) {
-      sum += arr[i] / arr.length;
+      average += arr[i] / arr.length;
     }
-    console.log(sum);
+    console.log(average);
   }
   return incrementCounter;
 }
 const myNewFun = createCounter();
 myNewFun();
+//the output:3
+```
+## Question 4: 
+
+Write a closure named compose that takes multiple functions as arguments and returns a new function. 
+The returned function should apply the provided functions in reverse order, passing the result of each function as an argument to the next function.
+```javascript
+function double(x) {
+  return x * 3;
+}
+function square(x) {
+  return x * x;
+}
+function composeFun(double, square) {
+  function incrementCounter() {
+    console.log(square(double(2)));
+  }
+  return incrementCounter;
+}
+const myNewFun = composeFun(double, square);
+myNewFun();
+//the output:16
 ```
