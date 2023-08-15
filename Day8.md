@@ -130,6 +130,7 @@ const myNewFun = createCounter();
 myNewFun();
 
 ```
+----------------------------------------------------------------------------------
 ## Question 2:
 
 Write a closure named calculateAverage that takes an array of numbers, nums, and returns a function. 
@@ -151,6 +152,23 @@ const myNewFun = createCounter();
 myNewFun();
 //the output:3
 ```
+---------------------------------------------------------------------------
+## Question 3: 
+
+Write a closure named powerOf that takes a base number base and returns a function. 
+The returned function, when invoked with an exponent exp, should calculate and return the result of base raised to the power of exp.
+```javascript
+function createCounter() {
+  let num = 3;
+  function incrementCounter() {
+    console.log(num ** Math.exp(2));
+  }
+  return incrementCounter;
+}
+const myNewFun = createCounter();
+myNewFun();
+```
+----------------------------------------------------------------------------
 ## Question 4: 
 
 Write a closure named compose that takes multiple functions as arguments and returns a new function. 
