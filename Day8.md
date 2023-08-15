@@ -156,19 +156,19 @@ myNewFun();
 Write a closure named compose that takes multiple functions as arguments and returns a new function. 
 The returned function should apply the provided functions in reverse order, passing the result of each function as an argument to the next function.
 ```javascript
-function double(x) {
-  return x * 3;
+function subtract(x) {
+  return x - 3;
 }
-function square(x) {
-  return x * x;
+function sum(x) {
+  return x + x;
 }
-function composeFun(double, square) {
+function composeFun(subtract, sum) {
   function incrementCounter() {
-    console.log(square(double(2)));
+    console.log(sum(subtract(8)));
   }
   return incrementCounter;
 }
-const myNewFun = composeFun(double, square);
+const myNewFun = composeFun(subtract, sum);
 myNewFun();
-//the output:16
+//the output:10
 ```
