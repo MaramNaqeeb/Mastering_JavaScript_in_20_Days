@@ -40,3 +40,46 @@ setTimeout(greeting, 1000);
 
 console.log("first");
 ```
+## Promises
+Promise in js is a placeholder object that is returned as a result of the consequence between the js and the web browser in an asynchronous operation.
+
+Making consistency or map between what is going happening on the web browser and the js. I will explain that through an example. If we send A network request to fetch a data from the internet, so the network in the web browser will send a request to the internet to get data, and therefore, it is going to have a consequence immediately in js as well in that the fetch label in js is going to trigger speaking to the internet sending a request of data and simultaneously in js land is going to return out a special kind of object or a placeholder object called a promise object that is going to sit in memory, and when the background work (web browser action) is done, it is going to fill in and update that object’s data in js land with the data from the background. Thus, when the background work finishes, we will have a result back in js because we have a two pronged façade function which has a consequence in the web browser and in js as well. So, we can know what is happening in the web browser because we have it in the js land because of that mapping.
+
+##### Example
+```javascript
+function display(data) {
+  console.log(data);
+}
+const futureData = fetch("https://twitter.com//will/tweets/1");
+futureData.then(display);
+console.log("Me first");
+```
+### Explanation of the above example: 
+At zero millisecond,  in the global memory, we put the function display and declare the const of futureData, so the first prong is in js as futureData=fetch(“https://twitter.com//will/tweets/1”) in which it will return out a promise object that has two properties; an initial empty value and an empty array called on fulfilled, and those two properties are also in the fetchData that is in the global memory. The other consequence or prong is in the web browser as XML or as HTTP request or generally a network request. The domain name(Twitter.com) and the path(/will/tweets/1) in the url will go to the network and ask for data from the internet. When it is complete after some milliseconds of time, instead of having a function that receives the data from the web browser, it goes and set up in js placeholder object that is called promise object, so we can get the response data in the value property that is stored into fetchData object, so the futureData.value will be updated with the response data because it is immediately linked to the background. 
+
+However, we need to make js runs a code automatically to use it after get the data into the value property. This happens when we put any function or code in the empty array property that is called fulfilled in which we can store functions in a list, for example. So, any function in that array will be triggered to run when the value property gets updated(has a value from the url). Thus, the value property will be auto inserted as an input or argument to fill in the parameter of any function that is stored in the array.
+
+#### How to get the display function into the fulfilled array in the above example? 
+We cannot use fulfilled.push(display(data)), because that array is hidden, but there is in js a method that allows us to do so which is ``` .then ```, so we can use the following command line:
+
+``` futureDta.then(display) ``` . This line will take the data in the display method and push it into the fulfilled array.
+#### How to delay the function display data from the fetched data from futureData
+
+##### Example
+```javascript
+function display(data) {
+  console.log(data);
+}
+function greeting() {
+  console.log("hi");
+}
+function blockForSec() {}
+setTimeout(greeting, 0);
+const futureData = fetch("https://twitter.com//will/tweets/1");
+futureData.then(display);
+blockForSec();
+console.log("Me first");
+```
+
+
+
