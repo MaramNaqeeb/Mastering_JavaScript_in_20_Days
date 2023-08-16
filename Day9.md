@@ -80,7 +80,7 @@ futureData.then(display);
 blockForSec();
 console.log("Me first");
 ```
-### Explanation oo the above example:
+### Explanation of the above example:
 At 3002ms, "Me first" will get consoled after calling the blockFor300ms, at 3003ms, the data fetched will will be displayed, and finally, at 3004ms, the function greeting will be executed and "hi" will get consoled. 
 
 Note: Any function is attached to a promise object by one of the two prongs for store functions which gives a promise object will go to the micro-task queue. Also, any function that is passed in directly to a façade function that triggers a web browser feature such as setTimeout will go to the callback queue when they are complete in the background web browser.
