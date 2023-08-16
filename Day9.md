@@ -1,5 +1,5 @@
 # Asynchronous & Promises
-In this file, I will continue talking about asynchronous in js especially the callback function. Furthermore, I will deeply explain promises in js, which is one of the most important concept in js. I will focus on callback queue and event loop, and fetch method.
+In this file, I will continue talking about asynchronous in js especially the callback queue and event loop. Furthermore, I will deeply explain promises in js, which is one of the most important concept in js in which I will focus on fetch method.
 
 ## Callback queue & Event Loop
 
