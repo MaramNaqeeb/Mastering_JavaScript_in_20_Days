@@ -1,5 +1,5 @@
 # Asynchronous & Promises
-In this file, I will continue talking about asynchronous in js especially the callback queue and event loop. Furthermore, I will deeply explain promises in js, which is one of the most important concept in js in which I will focus on fetch method. Also, I will introduce the problems and the benefits of promises.
+In this file, I will continue talking about asynchronous in js especially the callback queue and event loop. Furthermore, I will deeply explain promises in js, which is one of the most important concept in js in which I will focus on fetch method. Also, I will introduce the problems and the benefits of promises. Moreover, I will demonstrate the rules for the execution of asynchronous delayed code, and also the objective of Promises, web APIs, the callback and micro-task queues and event loop.
 
 ## Callback queue & Event Loop
 
@@ -85,14 +85,26 @@ console.log("Me first");
 
 Note: Any function is attached to a promise object by one of the two prongs for store functions which gives a promise object will go to the micro-task queue. Also, any function that is passed in directly to a façade function that triggers a web browser feature such as setTimeout will go to the callback queue when they are complete in the background web browser.
 
-### Promises problems: 
-99% of the developers have no idea about how they are working under the hood
-Debugging becomes super hard as a result
-Developers fail technical interviews 
+## Promises problems: 
+- 99% of the developers have no idea about how they are working under the hood
+- Debugging becomes super hard as a result
+- Developers fail technical interviews 
 
-### Promises Benefits
-Cleaner readable style with pseudo-synchronous style code
-Nice error handling process by the method .catch()
+## Promises Benefits
+- Cleaner readable style with pseudo-synchronous style code
+- Nice error handling process by the method ``` .catch() ```
+
+
+## Some rules for the execution of asynchronous delayed code:
+- Hold promise-deferred functions in a micro-task queue and callback function in a task queue (callback queue) when the web browser feature(API) finishes.
+- Add the function to the call stack or run the function when the call stack is empty and all global code run according to the event loop.
+Note: prioritize functions in the micro-task queue over the functions in the callback queue.
+
+
+## The objective of Promises, web APIs, the callback and micro-task queues and event loop
+- Non-blocking applications: this means we do not have to wait in the single thread and do not block further code from running.
+- However long it takes: we cannot predict when our browser feature’s work will finish so we let js handle automatically running the function on its completion.
+- Web applications: Asynchronous js is the backbone of the modern web in which it lets us build fast non-blocking  dynamic applications in which we can handle a ton of staff in the background while we race on in the foreground running our code being responsive to user’s interactions.
 
 
 
