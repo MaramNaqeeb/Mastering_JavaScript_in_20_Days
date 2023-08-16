@@ -80,6 +80,7 @@ futureData.then(display);
 blockForSec();
 console.log("Me first");
 ```
-
+### Explanation oo the above example:
+At 3002ms, "Me first" will get consoled after calling the blockFor300ms, at 3003ms, the data fetched will will be displayed, and finally, at 3004ms, the function greeting will be executed and "hi" will get consoled. 
 
 
