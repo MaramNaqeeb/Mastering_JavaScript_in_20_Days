@@ -83,7 +83,7 @@ console.log("Me first");
 ### Explanation of the above example:
  After calling the blockFor300ms, and at 3002ms, "Me first" will get consoled, at 3003ms, the data fetched will be displayed, and finally, at 3004ms, the function greeting will be executed and "hi" will get consoled. 
 
-Note: Any function is attached to a promise object by one of the two prongs for store functions which gives a promise object will go to the micro-task queue. Also, any function that is passed in directly to a façade function that triggers a web browser feature such as setTimeout will go to the callback queue when they are complete in the background web browser.
+Note: After all the global functions finished running, any function is attached to a promise object by one of the two prongs for store functions which gives a promise object will go to the micro-task queue. Also, any function that is passed in directly to a façade function that triggers a web browser feature such as setTimeout will go to the callback queue when they are complete in the background web browser.
 
 ## Promises problems: 
 - 99% of the developers have no idea about how they are working under the hood
