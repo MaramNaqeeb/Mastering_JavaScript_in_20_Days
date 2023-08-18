@@ -173,7 +173,172 @@ executeInSequenceWithCBs(function (tasks) {
 });
 ```
 
+## Question 2:
 
+You are given a function called `executeInParallelWithPromises`, which takes an
+array of APIs (represented by objects). 
+
+Your task is to write code that fetches the data of each API in parallel using
+promises. In Parallel means that the api which resolves first, returns its value
+first, regardless of the execution order. 
+
+The output of the `executeInParallelWithPromises` function should be an array
+containing the results of each API's execution.
+
+Each result should be an object with three keys: `apiName`, `apiUrl`, and
+`apiData`..
+
+```javascript
+const apis = [
+  {
+    apiName: "products", 
+    apiUrl: "https://dummyjson.com/products",
+  }, 
+  {
+    apiName: "users", 
+    apiUrl: "https://dummyjson.com/users",
+  }, 
+  {
+    apiName: "posts", 
+    apiUrl: "https://dummyjson.com/posts",
+  }, 
+  {
+    apiName: "comments", 
+    apiUrl: "https://dummyjson.com/comments",
+  }
+]
+
+const executeInParallelWithPromises = (apis) => {}
+
+```
+-------------------------------------------------------------------
+### Solution
+```javascript
+function createObj(name, url, data) {
+  const newObj = {};
+  newObj.apiName = name;
+  newObj.apiUrl = url;
+  newObj.apiData = data;
+
+  return newObj;
+}
+
+const executeInParallelWithPromises = (apis) => {
+  var array = [];
+  for (let i = 0; i < apis.length; i++) {
+    var fetchPromise = fetch(apis[i].apiUrl);
+    fetchPromise
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(data);
+        return data;
+      });
+
+    let name = `${apis[i].apiName}`;
+    let url = `${apis[i].apiUrl} `;
+    let data = fetchPromise;
+
+    let x = createObj(name, url, data);
+
+    array.push(x);
+  }
+  console.log(array);
+};
+
+console.log("Welcome to API");
+
+executeInParallelWithPromises(apis);
+```
+## Question 3: 
+
+You are given a function called `executeInSequenceWithPromises`, which takes an
+array of APIs (represented by objects). 
+
+Your task is to write code that fetches the data of each API sequentially (one
+after the other) using promises. 
+
+In Sequence means that the api which executes first, returns its value
+first.
+
+The output of the `executeInSequenceWithPromises` function should be an array
+containing the results of each API's execution.
+
+Each result should be an object with three keys: `apiName`, `apiUrl`, and
+`apiData`.
+
+```javascript
+
+const apis = [
+  {
+    apiName: "products", 
+    apiUrl: "https://dummyjson.com/products",
+  }, 
+  {
+    apiName: "users", 
+    apiUrl: "https://dummyjson.com/users",
+  }, 
+  {
+    apiName: "posts", 
+    apiUrl: "https://dummyjson.com/posts",
+  }, 
+  {
+    apiName: "comments", 
+    apiUrl: "https://dummyjson.com/comments",
+  }
+]
+
+//modify and write your code here
+const executeInSequenceWithPromises = (apis) => {}
+
+```
+### Solution
+```javascript
+function createObj(name, url, data) {
+  const newObj = {};
+  newObj.apiName = name;
+  newObj.apiUrl = url;
+  newObj.apiData = data;
+
+  return newObj;
+}
+
+const executeInParallelWithPromises = (apis) => {
+  var array = [];
+
+    async function getData() {
+      const response = await fetch(apis[i].apiUrl);
+
+      if (!response.ok) {
+        const message = `An error has occured: ${response.status}`;
+        throw new Error(message);
+      }
+
+      const data = await response.json();
+      //console.log(data);
+      return data;
+    }
+
+    getData().catch((error) => {
+      error.message; 
+    });
+
+    let name = `${apis[i].apiName}`;
+    let url = `${apis[i].apiUrl} `;
+    let data = getData();
+
+    let x = createObj(name, url, data);
+
+    array.push(x);
+  }
+  console.log(array);
+};
+
+console.log("Welcome to API");
+
+executeInParallelWithPromises(apis);
+```
 
 
 
