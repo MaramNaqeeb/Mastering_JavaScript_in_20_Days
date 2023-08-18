@@ -86,9 +86,28 @@ To grow as a software engineer, some engineers avoid blocks by research and read
 
 ## Learning sprint (1), week (2), day (1) delieverables
 - https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-problem
-- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs
-  
+```javascript
+const squareList = arr => {
+  arr=arr.filter(a=>a>0 && a % parseInt(a) === 0).map(a=>a*a)
+  return arr;
+};
 
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+```
+
+
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs
+```javascript
+function urlSlug(title) {
+
+title=title.trim().split(" ")
+title= title.filter(t => t !== "").map(t=>t.toLowerCase())
+return title.join("-")
+}
+
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone")
+```
 ### Question 1: Functions and Callbacks
 
 Implement a JavaScript function called mapAsync that takes an array and a callback function. 
