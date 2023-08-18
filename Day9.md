@@ -214,17 +214,17 @@ const executeInParallelWithPromises = (apis) => {}
 -------------------------------------------------------------------
 ### Solution
 ```javascript
-function createObj(name, url, data) {
-  const newObj = {};
-  newObj.apiName = name;
-  newObj.apiUrl = url;
-  newObj.apiData = data;
-
-  return newObj;
-}
 
 const executeInParallelWithPromises = (apis) => {
   var array = [];
+  function createObj(name, url, data) {
+    const newObj = {};
+    newObj.apiName = name;
+    newObj.apiUrl = url;
+    newObj.apiData = data;
+  
+    return newObj;
+  }
   for (let i = 0; i < apis.length; i++) {
     var fetchPromise = fetch(apis[i].apiUrl);
     fetchPromise
@@ -232,7 +232,7 @@ const executeInParallelWithPromises = (apis) => {
         return response.json();
       })
       .then((data) => {
-        // console.log(data);
+        //console.log(data);
         return data;
       });
 
@@ -295,18 +295,17 @@ const executeInSequenceWithPromises = (apis) => {}
 ```
 ### Solution
 ```javascript
-function createObj(name, url, data) {
-  const newObj = {};
-  newObj.apiName = name;
-  newObj.apiUrl = url;
-  newObj.apiData = data;
-
-  return newObj;
-}
-
 const executeInSequenceWithPromises = (apis) => {
   var array = [];
+  function createObj(name, url, data) {
+    const newObj = {};
+    newObj.apiName = name;
+    newObj.apiUrl = url;
+    newObj.apiData = data;
 
+    return newObj;
+  }
+  for (let i = 0; i < apis.length; i++) {
     async function getData() {
       const response = await fetch(apis[i].apiUrl);
 
@@ -321,7 +320,7 @@ const executeInSequenceWithPromises = (apis) => {
     }
 
     getData().catch((error) => {
-      error.message; 
+      error.message; // 'An error has occurred: 404'
     });
 
     let name = `${apis[i].apiName}`;
