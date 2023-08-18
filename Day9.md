@@ -106,6 +106,74 @@ Note: prioritize functions in the micro-task queue over the functions in the cal
 - However long it takes: we cannot predict when our browser feature’s work will finish so we let js handle automatically running the function on its completion.
 - Web applications: Asynchronous js is the backbone of the modern web in which it lets us build fast non-blocking  dynamic applications in which we can handle a ton of staff in the background while we race on in the foreground running our code being responsive to user’s interactions.
 
+# Learning sprint (1), week (2), day (3) delieverables
+
+## Question 1:
+
+You are given a function `executeInSequenceWithCBs` and some code. The task is to
+modify the `executeInSequenceWithCBs` function so that it runs and executes all
+the tasks inside the asyncTasks array. 
+
+The function should return an array of messages obtained from each task's
+execution.
+
+You are only allowed to change the `executeInSequenceWithCBs` function or add new
+functions/code. You cannot modify the tasks' functions.
+
+```javascript
+
+const task1 = (cb) => setTimeout(() => {
+  const message = "Task 1 has executed successfully!";
+  cb(message);
+}, 3000)
+
+const task2 = (cb) => setTimeout(() => {
+  const message = "Task 2 has executed successfully!";
+  cb(message);
+}, 0)
+
+const task3 = (cb) => setTimeout(() => {
+  const message = "Task 3 has executed successfully!";
+  cb(message);
+}, 1000)
+
+const task4 = (cb) => setTimeout(() => {
+  const message = "Task 4 has executed successfully!";
+  cb(message);
+}, 2000)
+
+const task5 = (cb) => setTimeout(() => {
+  const message = "Task 5 has executed successfully!";
+  cb(message);
+}, 4000)
+
+const asyncTasks = [task1, task2, task3, task4, task5];
+
+const executeInSequenceWithCBs = (tasks, callback) => {}
+
+```
+-------------------------------------------------------------------
+### Solution:
+```javascript
+let asyncTasks = [task1, task2, task3, task4, task5];
+let arr = [];
+
+var executeInSequenceWithCBs = function (cb) {
+  for (i = 0; i < asyncTasks.length; i++) {
+    var messagesOfTasks = asyncTasks[i];
+
+    messagesOfTasks(cb);
+
+    arr.push(x);
+  }
+};
+
+executeInSequenceWithCBs(function (tasks) {
+  console.log(tasks);
+});
+```
+
+
 
 
 
