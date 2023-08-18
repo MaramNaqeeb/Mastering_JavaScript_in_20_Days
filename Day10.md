@@ -26,25 +26,31 @@ OOP is the opposite of functional programmnig in that functional programming has
 If we have a code that is run multiple times like adding properties or methods, we can wrap them up in  generalize function (abstract it) which means we save that function and use it again for many times for different objects.
 
   ##### Example
-    ```javascript
-      function userCreater(name, score) {
-        const newUser = {};
-        newUser.name = name;
-        newUser.score = score;
-        newUser.incerement = function () {
-          return (newUser.score += 1);
-        };
-        return newUser;
-      }
-      const user1 = userCreater("Will", 3);
-      const user2 = userCreater("Jane", 11);
-      user1.incerement();
-    ```
-    The fundamental wrong with this approach is that we store the same function many times, so the code of the function increment() for the two users is identical in which when we create new objects that function will be inside all of them identically, so we lose lines and space of memory in the case of a large number of users. Another problem with this approach is that if we want to add a new feature to the object, we have to add it to every user.
+  ```javascript
+       function userCreater(name, score) {
+         const newUser = {};
+         newUser.name = name;
+         newUser.score = score;
+         newUser.incerement = function () {
+           return (newUser.score += 1);
+         };
+         return newUser;
+       }
+       const user1 = userCreater("Will", 3);
+       const user2 = userCreater("Jane", 11);
+       user1.incerement();
+  ```
+
+   The fundamental wrong with this approach is that we store the same function many times, so the code of the function increment() 
+    for the two users is identical in which when we create new objects that function will be inside all of them identically, so we
+    lose lines and space of memory in the case of a large number of users. Another problem with this approach is that if we want to 
+    add a new feature to the object, we have to add it to every user.
           
   #### Generate objects using a function
-    - Problems: Each tine we create a new user we make space in our computers’ memory for all our data and functions. But our functions are just copies 
-    - Benefits: it is simple and easy to reason about.
+   - Problems: Each tine we create a new user we make space in our computers’ memory for all our data and functionsm, but
+      our functions are just copies 
+   - Benefits: it is simple and easy to reason about.
+    
   ##### To solve that problem, we need to create one function to be used without making a cope of it when we want to use it with objects; this is called prototype chain.
   ## Prototype chain
   I will explan the prototype chain through the following example:
