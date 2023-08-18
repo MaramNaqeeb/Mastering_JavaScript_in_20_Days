@@ -1,4 +1,4 @@
-# Object Orented Programming(OOP) in JavaScript
+# Object Oriented Programming(OOP) in JavaScript
 In this file I will demonstrate the meaning of OOP and some practical concepts that belong to it which include: prototype, ``` __proto__ ```, dot notation, ``` Object.prototype() ```, ``` Object.create() ```, ``` this ``` keyword, and ``` new ``` keyword. Moreover, I will illustrate four ways of creating objects in JavaScript.
 
 ## OOP 
