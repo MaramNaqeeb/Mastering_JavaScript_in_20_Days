@@ -304,7 +304,7 @@ function createObj(name, url, data) {
   return newObj;
 }
 
-const executeInParallelWithPromises = (apis) => {
+const executeInSequenceWithPromises = (apis) => {
   var array = [];
 
     async function getData() {
@@ -337,7 +337,7 @@ const executeInParallelWithPromises = (apis) => {
 
 console.log("Welcome to API");
 
-executeInParallelWithPromises(apis);
+executeInSequenceWithPromises(apis);
 ```
 
 
