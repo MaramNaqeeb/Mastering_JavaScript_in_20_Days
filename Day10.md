@@ -9,16 +9,17 @@ OOP is the opposite of functional programmnig in that functional programming has
   We can use the dot notation to create a new object to add properties to it afterward.
   ##### Example
   ```javascript
-    const newUser = {};
-    newUser.name = "Will";
-    newUser.score = 3;
-    newUser.increment = function () {
-      return (newUser.score += 1);
-    };
-    
-    console.log(newUser.name);
-    console.log(newUser.score);
-    console.log(newUser.increment());
+  const newUser = {};
+  newUser.name = "Will";
+  newUser.score = 3;
+  newUser.increment = function () {
+    return (newUser.score += 1);
+  };
+  
+  console.log(newUser.name);
+  console.log(newUser.score);
+  console.log(newUser.increment());
+
   ```
   Note: the functions on objects are called methods.
   
@@ -27,18 +28,19 @@ If we have a code that is run multiple times like adding properties or methods, 
 
   ##### Example
   ```javascript
-       function userCreater(name, score) {
-         const newUser = {};
-         newUser.name = name;
-         newUser.score = score;
-         newUser.incerement = function () {
-           return (newUser.score += 1);
-         };
-         return newUser;
-       }
-       const user1 = userCreater("Will", 3);
-       const user2 = userCreater("Jane", 11);
-       user1.incerement();
+  function userCreater(name, score) {
+  const newUser = {};
+  newUser.name = name;
+  newUser.score = score;
+  newUser.incerement = function () {
+    return (newUser.score += 1);
+  };
+  return newUser;
+}
+const user1 = userCreater("Will", 3);
+const user2 = userCreater("Jane", 11);
+user1.incerement();
+
   ```
 
    The fundamental wrong with this approach is that we store the same function many times, so the code of the function increment() 
@@ -56,24 +58,25 @@ If we have a code that is run multiple times like adding properties or methods, 
   I will explan the prototype chain through the following example:
   ##### Example
  ```javascript
-    function userCreater(name, score) {
-    const newUser = Object.create(functionStore);
-    newUser.name = name;
-    newUser.score = score;
-    return newUser;
-  }
-  const functionStore = {
-    incerement: function () {
-      return (this.score += 1);
-    },
-    login: function () {
-      console.log("log user");
-    },
-  };
-  const user1 = userCreater("Will", 3);
-  const user2 = userCreater("Jane", 11);
-  user1.incerement();
-```
+ function userCreater(name, score) {
+  const newUser = Object.create(functionStore);
+  newUser.name = name;
+  newUser.score = score;
+  return newUser;
+}
+const functionStore = {
+  incerement: function () {
+    return (this.score += 1);
+  },
+  login: function () {
+    console.log("log user");
+  },
+};
+const user1 = userCreater("Will", 3);
+const user2 = userCreater("Jane", 11);
+user1.incerement();
+
+ ```
 #### Explanation of the above example:
 In the above example, when it does not find the increment function in the object, its newUser object and user1 object itself will have a link to the function that increment function is in and use it.
 Under the newUser object there is a hidden property called ``` __proto__ ``` which links the object to the functionStore function. This is called prototypal feature, which means when the object does not find a function or data on the object, it goes to ``` __proto__``` property or reference and looks at what it is linking to such as a function or data. This will solve the avoid the problem of wasted memory space. Thus, js has a prototypal nature, which is the ability for objects to connect to other objects.
