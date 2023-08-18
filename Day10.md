@@ -70,5 +70,100 @@ If we have a code that is run multiple times like adding properties or methods, 
 ```
 #### Explanation of the above example:
 In the above example, when it does not find the increment function in the object, its newUser object and user1 object itself will have a link to the function that increment function is in and use it.
-Under the newUser object there is a hidden property called __proto__ which links the object to the functionStore function. This is called prototypal feature, which means when the object does not find a function or data on the object, it goes to __proto__ property or reference and looks at what it is linking to such as a function or data. This will solve the avoid the problem of wasted memory space. Thus, js has a prototypal nature, which is the ability for objects to connect to other objects.
+Under the newUser object there is a hidden property called ``` __proto__ ``` which links the object to the functionStore function. This is called prototypal feature, which means when the object does not find a function or data on the object, it goes to ``` __proto__``` property or reference and looks at what it is linking to such as a function or data. This will solve the avoid the problem of wasted memory space. Thus, js has a prototypal nature, which is the ability for objects to connect to other objects.
+
+## ``` hasOwnProperty() ``` Method
+Old headline object called Object.prototype() it has a punch or useful functions that are used in our objects because all objects in js has the hidden property ``` __proto__ ``` which link objects to the functions in the object.property such as hasOwnProperty().
+
+##### Example
+```javascript
+function userCreater(name,score){
+const newUser =Object.create(functionStore);
+newUser.name=name
+newUser.score=score
+return newUser
+}
+const functionStore={
+incerement:function() { return this.score+=1},
+login: function(){console.log(“log user”)}
+}
+const user1=userCreater("Will",3)
+const user2=userCreater("Jane",11)
+user1.hasOwnPropert("score")
+```
+## ``` this ``` keyword 
+
+``` this ``` refers to the current object in which it enables us to attach the objects in the global memory to that local current object that this refers to. So, in the following example, this keyword is attached to the global object function which is in our example userCreator(); therefore, this keyword will evaluate to the new created object and in our example it evaluates to user1 and user2.
+##### Example
+```javascript
+function userCreater(name, score) {
+  const newUser = Object.create(functionStore);
+  newUser.name = name;
+  newUser.score = score;
+  return newUser;
+}
+const functionStore = {
+  incerement: function () {
+    function add() {
+      return this.score ++;
+    }
+    add();
+  }
+}
+const user1 = userCreater("Will", 3);
+
+const user2 = userCreater("Jane", 11);
+user1.incerement();
+```
+Note: we can return the value of score++ by add() function or by using call() or reply() methods.
+
+## Arrow function style:
+It is a new shorten style for declaring and saving functions.
+
+##### Example
+```javascript
+function userCreater(name, score) {
+  const newUser = Object.create(functionStore);
+  newUser.name = name;
+  newUser.score = score;
+  return newUser;
+}
+const functionStore = {
+  incerement: function () {
+    const add = () => {
+      return (this.score += 1);
+    };
+
+    add();
+  },
+};
+const user1 = userCreater("Will", 3);
+const user2 = userCreater("Jane", 11);
+user1.incerement();
+```
+## ``` new ``` keyword
+``` new ``` keyword is used to automate so much stuff in which it automatically creates and returns an object  and it makes a link to some objects automatically, and that object that it is automatically created is called this, so instead of returning newUser in the example, we can simply return this.
+
+##### Example
+```javascript
+function userCreater(name, score) {
+  this.name = name;
+  this.score = score;
+}
+userCreater.prototype;
+userCreater.prototype.increment = function () {
+  return (this.score += 1);
+};
+
+const user1 = new userCreater("Will", 3);
+const user2 = new userCreater("Jane", 11);
+user1.incerement();
+```
+#### EXplanation
+- In the above example, we create the obj ``` this ``` with the help of ``` new ``` keyword, so the user1 object will not be linked to the function increment but to the prototype property instead which is itself an object.
+
+- In the above example there is no need to return an object out because we can run the function with the help of the new keyword or modifier. Also, we need a function that store out functions which is the prototype property. 
+
+- In the global memory we, we have the function userCreator() that has an implicit object campo that has a prototype property which is an object itself and we store our functions inside the prototype object. And finally we declare the objects user1 in the global memory. After that we can initialize our object user1 using the new modifier. In the local memory we assign the values of the properties name: ‘Will’, and score:3. We declare an empty object assigned by this (we do not do that once).  Inside it we have a hidden proto property that will link to prototype object. Then we fill the empty object with the values of the object user1. After that, we return this object into our user1 object in the global memory with the values and the proto property which is linked to the prototype object. For the increment function of user1, it goes to the object user1 to find that function, it does not find it, but there is a proto property that is linked to the prototype object which stores the increment function there.
+
 
