@@ -76,8 +76,8 @@ Special values are used to avoid bugs or to get more power out of our js languag
   var myAge= Number("34");
   var x =myAge-"my son’s age";	 //the output: NaN
   
-  myCatAge === myCatAge 		//the output: false  because NaNs are not equal to each other because NAN  is the only value
-                            // in js that does not have an identity property, which means that it is not equal to itself.
+  myCatAge === myCatAge 	//the output: false  because NaNs are not equal to each other because NAN  is the only value
+                          // in js that does not have an identity property, which means that it is not equal to itself.
   ```
 #### There is a utility in js called isNaN, which checks if the value is NaN or not in which ut returns either true or false. This utility coerces values to numbers before it checks for them to be NaN. 
 ##### Example
