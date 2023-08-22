@@ -211,6 +211,25 @@ const checkNaN=(value)=>{
 }
 console.log(checkNaN("4r5"))
 ```
+------------------------------------------------------------------
+-------------------------------------------------------------------
 
+## Question 3: 
+
+Write a function called `isEmptyValue` that checks if a given input is an empty value (undefined,
+null, or empty string). 
+
+```javascript
+function isEmptyValue(value) {
+ if(value.length===0){
+   return "This is an empty string" 
+ }else if(value===null){
+     return null;
+ }else{
+     return undefined
+ }
+}
+console.log(isEmptyValue(""))
+```
 -------------------------------------------------------------------
 
