@@ -172,6 +172,27 @@ yesterday.toUTCSting(); 	//the output: “Wed,06 2019  06:00:00  GMT”
 
 var myGPA= String(transcript.gpa);	//the output:”3.54”
 ```
+# Learning sprint (1), week (3), day (1) delieverables
+
+## Question 1:
+
+Write a function called `convertStringToNumber` that converts a string to a
+number using the unary plus operator. 
+
+If the input is not a string, return an object of the input's value and type.
+
+```javascript
+function convertStringToNumber(input) {
+ if(typeof input ==="string"){
+  return +input;
+
+}else{
+    return {input:typeof input}
+}
+}
+console.log(convertStringToNumber("34"))
+```
+-------------------------------------------------------------------
 
 
 
