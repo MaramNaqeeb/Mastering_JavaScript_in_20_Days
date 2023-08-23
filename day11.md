@@ -1,5 +1,5 @@
 # Introduction
-In this file, I will make a general introduction of JavaScript starting with the data types and some of the operators used in JS. The most important thing I would like to insist on is that We should not blame JS language when we get surprised by the results of some operations using js, because we have to be aware of js specifications first such as the specification for ++ operator. 
+In this file, I will make a general introduction of JavaScript starting with the data types and some of the operators used in JS. The most important thing I would like to insist on is that We should not blame JS language when we get surprised by the results of some operations using js, because we have to be aware of js specifications first such as the specification for ++ operator. Moreover, I will introduce an important concept in JS which is coercion.
 
 ## Examples on one of JS specification
 ```javascript
@@ -172,7 +172,217 @@ yesterday.toUTCSting(); 	//the output: “Wed,06 2019  06:00:00  GMT”
 
 var myGPA= String(transcript.gpa);	//the output:”3.54”
 ```
+## Coercion
+Coercion can be defined as an implicit conversion from one data type to another.
+In order to make coercion we use abstract opeartions, such as toPrimitive, toString, Number, and Boolean.
+
+-	ToPrimitive(hint) takes an optional type hint
+
+  If the hint is a “number”
+  valueOf()
+  toString()
+  
+  While
+  
+  If the hint is a “string”
+  toString()
+  valueOf()
+  
+  If we applied both without getting a primitive value, so an error will thro
+  ##### Example
+  ```javascript
+  var x=[1,2,3]
+  console.log(x.toString().valueOf())
+  ```
+-	ToString()
+  Is an abstract operation that takes a value and gives the representation of that value in string form.
+ 	##### Example
+ 	```javascript
+  null   	// "null"
+  false  	// "false"
+  3		    //  "3"
+  0		    //  "0"
+  -0	   	//  "0"
+    ```
+  If we call toString(object), that will invoke the toPrimitive(string), which ends up calling toString() and then valueOf().
+  ##### Example
+  ```javascript
+  []		                       // ""
+  [null,undefined]		         // ","
+  [[],[],[]],[]]	  	         // ",,,"
+  [,,,,]		        	         // ",,,"
+    {}                         // "[object Object]"  //this is the default toString on the object prototype
+    {a:2}                      // "[object Object]"
+   {toString(){return “X”;}}   //  “X"
+  ```
+-	Number () is an abstract operation that converts the value into a number.
+  ##### Example
+  ```javascript
+  ""		          //0	//an empty string represents that there is no value there.
+  "0"		          //0
+  "-0"	          //-0
+  " 009 "	        //9	//it removes the white spaces
+  "3.14159"     	//3.14159
+  "0."		        //0
+  ".0"		        //0
+  "."	            //NaN
+  "Oxaf"	        //175
+  false 	        //0
+  true	          //1
+  null	        	//0
+  undefined	      //NaN
+```
+More examples on Number:
+```javascript
+[""]       	       //0
+["0"]	             //0
+["-0"]	           //-0
+[null]	           // 0	//because it first becomes an empty string
+[undefined]	       //0	//because it first becomes an empty string
+
+[1,2,3]		         //NaN
+[[[[]]]]		       //0
+{}	               //NaN
+{valueOf()         //{return 3;}}	3 	//here we override the value of an object
+```
+Note: The empty string is the root od all coercion evil.
+- Boolean
+Boolean is an abstract operation that converts the value into a boolean.It is less algorithmic and straight lookup. We have to check if the value isFalsy() or is Truthy() in which values in JS can be categorized into falsy or truthy.
+
+```javascript
+//Falsy values:			
+
+""				          
+0				               
+-0				            
+Null
+NaN			            
+False			         
+Undefined
+	      	
+//Truthy values:
+"foo"                
+23
+{a:1}
+[1.3]
+true
+function(){}
+[]
+{}   
+```
+## Cases of coercion
+Do not avoid coercion because it is evil.
+##### Example
+```javascript
+var msg1="There are";
+var numStudents=16;
+var msg2=" students.";
+Console.log(msg1+numStudents+msg2);
+//the output: "There are 16 students."
+```
+   - In the above example, we use a template lateral strings in which we add a sting to a number.
+   - When we use the + operator and one of the values is a string, js prefers the string, so js turn the value into a string.
+   - The number inside ${} will convert to a sting implicitly.
+  ##### Example
+  ```javascript
+  var num=16;
+  console.log(`There are ${num+””} students`)
+  We can throw the value into an array and use join with it
+  var num=16;
+  console.log(`There are ${[num].join(" ")} students`)
+  //Or
+  console.log(`There are ${num.toString()} students`)
+```
+But the weird thing here is that we called a method on a primitive value, so that means that there is an implicit coercion there. However, if we do not want to do any coercion to be explicit, we can use the fundamental object String, for example, without the new keyword string.
+``` console.log(`There are ${String(num)} students`) ```
+
+if we use + operator with a string and a number, js will give us a string concatenation. To avoid that, and to turn the make js prefer the number over the string we use + operator before the operation as the following example:
+```javascript
+var num=16;
+var numString="5"
+console.log(+numString +num)
+//OR by using Number()
+var num=16;
+var msg="5"
+console.log(Number(msg)+num)
+```
+  - If we use a minus operator, js prefer numbers over strings.
+  - If we write an if statement that uses non-Boolean in the if class, such as checking the string is empty or not, that is called coercion.
+  ##### Example1
+  ```javascript
+  if(studentsInputElem.value){
+  numStudents=Number(studentsInputElem.value);
+  }
+  while (newStudents.length){
+  enrollStudent(newStudents.pop());
+  }
+  //that is falsy
+  ```
+  ##### Example2
+ ```javascript
+  if(!!studentsInputElem.value){   		//that turns it to a Boolean, we can use Boolean(), these are useful with strings
+  numStudents=Number(studentsInputElem.value);
+  }
+  while (newStudents.length>0){		//this converts it to a Boolean, this is useful with numbers
+  enrollStudent(newStudents.pop());
+  }
+```
+## Boxing
+To access the  .length of a string value we use boxing, which is a form of implicit coercion. To access the property of a primitive value JS coerces the primitive value into an object counterpart so that we can access the properties and methods on them, so the code will become clear.
+
+
+Note1:It is useful to use the implicit Boolean coercion with undefined, null, or objects, but not as much with strings, or numbers because we have some corner cases.
+Note2: All programming language have conversion, and have type conversion corner cases.
+```javascript
+Number( “” );		//0
+Number(“ \t\n”)	//0
+Number(null)		//0
+Number(undefined)	//NaN
+Number( [] )		//0
+Number( [1,2,3] )	//NaN
+Number( [null] )		//0
+Number([undefined])	//0
+Number( {} )		//NaN
+
+String( -0 )		//“0”
+String( null )		//“null”
+String( undefined )	//“undefined”
+String( [null] )		//“”
+String( [undefined] )	//“”
+Boolean( new Boolean(false) )	//true
+
+Note: a lot of falsy values become numbers such as null and empty string.
+
+The root of all (coercion) evil:
+StudentsTnput.value=””;	//0
+
+Number(studentsInput.value);
+StudentsInput.value=”  \t\n”;	//0 because it is full of white space because js strips off all the white spaces before doing coercion 
+Number(studentsInput.value);
+
+More corner cases:
+Number(true)		//1
+Number(false)		//0
+1<2			//true
+2<3			//true
+1<2<3			//true
+(1<2)<3			//false
+(true)<3		//true
+1<3			//true
+3>2			//true
+2>31			//true
+3>2>1			//false
+(3>2)>1			//false
+(true)>1		//false
+1>1         //false
+```
 # Learning sprint (1), week (3), day (1) delieverables
+If we call Number(object), that will invoke the toPrimitive(number), which ends up calling valueOf() and then toString().
+```javascript
+(for [] and {} by default);
+valueOf(){return this;}	      //if value of that method  is an array or object that have not overridden,
+                                //it just returns itself. Thus, it will convert the value into string.
+```
 
 ## Question 1:
 
@@ -211,7 +421,6 @@ const checkNaN=(value)=>{
 }
 console.log(checkNaN("4r5"))
 ```
-------------------------------------------------------------------
 -------------------------------------------------------------------
 
 ## Question 3: 
