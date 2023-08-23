@@ -462,3 +462,34 @@ function compareObjects(input1, input2) {
 console.log(compareObjects({name:"Jane",age:16},{name:"Ann",age:13}))
 ```
 ------------------------------------------------------------------
+## Question 5: 
+
+Write a function called `complexCoercion` that takes a single argument and
+checks if its type is primitive, and if so returns a coerced value according to
+the rules below.
+
+coercion rules: 
+- if input is primive and:
+  - if input is a number, convert to string and then return a boolean. 
+  - if input is a string, return a boolean.
+  - if input is `null` or `undefined`, return `false`.
+
+If input is not a primitive type, return the argument.
+
+```javascript
+function numberToString(x) {
+  if (typeof x !== "object") {
+    if (typeof x === "number") {
+      x = x.toString();
+      return Boolean(x);
+    } else if (typeof x === "string") {
+      return Boolean(x);
+    } else if (x === null || x === undefined) {
+      return false;
+    }
+  } else {
+    return x;
+  }
+}
+console.log(numberToString(5));
+```
