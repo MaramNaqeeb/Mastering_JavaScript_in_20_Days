@@ -1,5 +1,5 @@
 
-# The philpshphy of coercion & Equality & Static typing
+# The philosophy of coercion & Equality & Static typing
 In this file, I will continue talking about coercion. After that, I will differentiate between the double equal and the triple equal deeply depending on the data types. Then, I will explain the static typing which is TypeScript and its pros and cons.
 
 ## The philosophy of coercion
