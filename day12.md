@@ -1,6 +1,6 @@
 
 # The philpshphy of coercion & Equality & Static typing
-In this file, I will continue talking about coercion. After that, I will differentiate between the double equal and the triple equal deeply depending on the data types. 
+In this file, I will continue talking about coercion. After that, I will differentiate between the double equal and the triple equal deeply depending on the data types. Then, I will explain the static typing which is TypeScript and its pros and cons.
 
 ## The philosophy of coercion
 - Nothing should be type rigidly, static types, or type soundness. Thus, JS is a dynamic typing, which is not a weakness, but rather it is a strength point in which it is able to survive multi-paradigm because of its type system.
@@ -176,3 +176,62 @@ Note1: Not knowing the types means not fully understanding the code, but we shou
 Note2: Not knowing the types is equivalent to assuming type conversion. So, because of corner case, the only safe choice is triple equals.
 
 Therefore, if you do not know the types, triple equals is the only reasonable choice.
+
+## Typescript
+#### Benefits:
+-	Catch type-related mistakes.
+-	Communicate type intend because the typing is in the code.
+-	Provide IDE feedback through the tooling ecosystem that can show up live directly in your ID.
+
+#### Caveats:
+-	Inferencing is best-guess, not a guarantee. 
+-	Annotations are optional in which if we do not put an annotation on a variable, typescript will default to the any type unless you have that turned off, then you are not getting any benefit out of it.
+-	Any part pf the application that isn’t types introduces uncertainty.
+##### Example
+```javascript
+var teacher =”Kyle”;
+teacher ={name: “Kyle”};	//this will throw an error: can’t assign an object to a string.
+
+//This is the same as:
+
+var teacher: string =”Kyle”;
+teacher ={name: “Kyle”};	//this will throw an error: can’t assign an object to a string.
+```
+The above example shows that if I do not do any typing at all, both TypeScript and Flow by default will do some static types inferencing.
+
+#### Custom types: We can define an object of a type as in the following example:(TypeScript is helpful in this case)
+##### Example
+```javascript
+type student={name:string{;
+function getName(studentRec:student):string{
+return studentRec.name;
+}
+var firstStudent:student={name:”Frank”}
+var firstStudentName:string=getName(firstStudent);
+```
+#### Validating operand types :(TypeScript is helpful in this case)
+##### Example
+```javascript
+var studenName: string=”Frank”;
+var studentCount :number =16 studentName;
+//this will throw an error: can’t substract string. //because coercion is not allowed here.
+```
+## Pros and cons of TypeScript
+#### Pros
+-	Make the code more obvious
+-	Familiarity: they look like other language’s type system(the design the syntax)
+-	Extremely popular these days. It is used in Microsoft and Facebook.
+-	They are very sophisticated and good at what they do.
+
+#### Cons
+-	They use “non-JS-standard” syntax (or code comments).
+-	They require a build process which easies the barrier to entry.
+-	Their sophistication can be intimidating to those without prior formal types experience.
+-	They focus more on “static types” (variables, parameters, returns, properties, etc) that value types.
+
+## Summary 
+JS has a dynamic type system, which users various forms of coercion for value type conversion, including equality comparison.
+However, the prevailing response seems to be: avoid as much of this system as possible, and use === to “protect” from needing to worry about types.
+
+
+
