@@ -20,17 +20,17 @@ In this file, I will continue talking about coercion. After that, I will differe
   var numStudents=16;
   console.log(`There are ${numStudents} students.`);
   ```
-##### Another Example:
-```javascript
-var workshopEnrollment1=16;
-var workshopEnrollment2=workshop2Elem.value;
-//Instead of saying
-if(Number(workshopEnrollment1) < Number(workshopEnrollment2)){
-}
-//We can simply say
-if(workshopEnrollment1 < workshopEnrollment2){
-}
-```
+  ##### Another Example:
+  ```javascript
+  var workshopEnrollment1=16;
+  var workshopEnrollment2=workshop2Elem.value;
+  //Instead of saying
+  if(Number(workshopEnrollment1) < Number(workshopEnrollment2)){
+  }
+  //We can simply say
+  if(workshopEnrollment1 < workshopEnrollment2){
+  }
+  ```
 ## Useful v.  Dangerous vs. Better
 - The useful thing happens when the reader is focused on what is important.
 - The dangerous thing happens when the reader cannot tell what will happen
@@ -56,30 +56,39 @@ In this exercise, you will define some validation functions that check user inpu
     - `attended` must be less than or equal to `length`
 
 ```javascript
-function isValidName(name){
-if(typeof name=="string" && name.trim().length>=3){
-return true
+function isValidName(name) {
+  if (typeof name == "string" && name.trim().length >= 3) {
+    return true;
+  }
+  return false;
 }
-return false
-}
-function hoursAttended(attended, length){
-if(typeof attended =="string" && attended.trim()!=""){
-attended=Number(attended);		//to convert its type
-}
-if(typeof length =="string" && length.trim()!=""){
-length=Number(length);		//to convert its type
-}
-if(typeof attended=="number" && typeof length=="number" && attended>=0 &&length>=0 &&Number.isInteger(attended)&& Number.isInteger(length)&&attended<=length){
-return true;
-}
-return false
+function hoursAttended(attended, length) {
+  if (typeof attended == "string" && attended.trim() != "") {
+    attended = Number(attended); //to convert its type
+  }
+  if (typeof length == "string" && length.trim() != "") {
+    length = Number(length); //to convert its type
+  }
+  if (
+    typeof attended == "number" &&
+    typeof length == "number" &&
+    attended >= 0 &&
+    length >= 0 &&
+    Number.isInteger(attended) &&
+    Number.isInteger(length) &&
+    attended <= length
+  ) {
+    return true;
+  }
+  return false;
 }
 
-console.log(isValidName("Frank") ===true);
-console.log(isValidName(false) ===false);
-console.log(isValidName(null) ===false);
-console.log(hoursAttended(6,10) ===true);
-console.log(hoursAttended(6,"10") ===true);
-console.log(hoursAttended("6",10) ===true);
-console.log(hoursAttended("6","10") ===true);
+console.log(isValidName("Frank") === true);
+console.log(isValidName(false) === false);
+console.log(isValidName(null) === false);
+console.log(hoursAttended(6, 10) === true);
+console.log(hoursAttended(6, "10") === true);
+console.log(hoursAttended("6", 10) === true);
+console.log(hoursAttended("6", "10") === true);
+
 ```
