@@ -264,6 +264,7 @@ D) `1`, `ReferenceError`
 
 #### Answer:
 D) is the right choice because a is a variable which is a functional scope, so we can access its value if it is inside a block scope. However, we cannot access let and const values because they are block scope, so we cannot access them from outside their block scope, which results in a reference error. 
+
 -------------------------------------------------------------------
 
 ### QUESTION #2:
@@ -296,6 +297,7 @@ D) `1`, `ReferenceError`
 
 #### Answer:
 A) is the correct answer because we var can be hoisted which results in an undefined value, while const and let cannot be hoisted; therefore, a reference error will be thrown.
+
 -------------------------------------------------------------------
 
 ### QUESTION #3:
@@ -336,4 +338,5 @@ D) `[ 36, 100, 45 ]` | `[ 1, 2, 3 ]` | `[ 1, 2, 3 ]`
 
 #### Answer: 
 C) is the correct answer because var, let and const are declared and executed inside the fucnction scope, so the array [36, 100, 45]  will get consoled. Then, var, let and const are declared and executed inside the block scope, so the array [1,2,3] will get consoled. Then, the third console is in the function scope after the block scope; therefore, we can access the new value of var which is in the block scope, but we cannot access the const and let values that are in the block scope, so js prints the values of const and let which we can access which are in the function scope which results in printing the array [1,100,45].
+
 --------------------------------------------------------------
