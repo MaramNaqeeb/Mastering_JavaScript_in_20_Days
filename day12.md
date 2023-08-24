@@ -233,5 +233,107 @@ var studentCount :number =16 studentName;
 JS has a dynamic type system, which users various forms of coercion for value type conversion, including equality comparison.
 However, the prevailing response seems to be: avoid as much of this system as possible, and use === to “protect” from needing to worry about types.
 
+# Learning sprint (1), week (3), day (2) delieverables
 
+### QUESTION #1:
 
+What will be the output of the following code snippet? Pick the right choice
+then **justify your answer with an explanation**.
+
+```javascript
+function testScope1() {
+  if (true) {
+    var a = 1;
+    let b = 2;
+    const c = 3;
+  }
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+testScope1();
+
+```
+**Choices:**
+
+A) `undefined`, `undefined`, `undefined`   
+B) `1`, `undefined`, `ReferenceError`  
+C) `1`, `ReferenceError`, `ReferenceError`   
+D) `1`, `ReferenceError`
+
+#### Answer:
+D) is the right choice because a is a variable which is a functional scope, so we can access its value if it is inside a block scope. However, we cannot access let and const values because they are block scope, so we cannot access them from outside their block scope, which results in a reference error. 
+-------------------------------------------------------------------
+
+### QUESTION #2:
+
+What will be the output of the following code snippet? Pick the right choice
+then **justify your answer with an explanation**.
+
+```javascript
+function testScope2() {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+  if (true) {
+    var a = 1;
+    let b = 2;
+    const c = 3;
+  }
+}
+
+testScope2();
+
+```
+
+**Choices:**
+
+A) `undefined`, `ReferenceError`   
+B) `1`, `undefined`, `ReferenceError`   
+C)`undefined`, `undefined`,`ReferenceError`  
+D) `1`, `ReferenceError`
+
+#### Answer:
+A) is the correct answer because we var can be hoisted which results in an undefined value, while const and let cannot be hoisted; therefore, a reference error will be thrown.
+-------------------------------------------------------------------
+
+### QUESTION #3:
+
+What will be the output of the following code snippet? Pick the right choice
+then **justify your answer with an explanation**.
+
+```javascript
+
+function testScope3() {
+  var a = 36;
+  let b = 100;
+  const c = 45;
+
+  console.log([a, b, c]);
+
+  if (true) {
+    var a = 1;
+    let b = 2;
+    const c = 3;
+
+    console.log([a, b, c]);
+  }
+
+  console.log([a, b, c]);
+}
+
+testScope3();
+
+```
+
+**choices:**
+
+A) `[ 36, 100, 45 ]` | `[ 1, 2, 3 ]` | `[ 36, 2, 3 ]`   
+B) `[ 36, 100, 45 ]` | `[1, 2, 3 ]` | `[ 36, 100, 45 ]`   
+C) `[ 36, 100, 45 ]` | `[ 1, 2, 3 ]` | `[ 1,100, 45 ]`   
+D) `[ 36, 100, 45 ]` | `[ 1, 2, 3 ]` | `[ 1, 2, 3 ]`
+
+#### Answer: 
+C) is the correct answer because var, let and const are declared and executed inside the fucnction scope, so the array [36, 100, 45]  will get consoled. Then, var, let and const are declared and executed inside the block scope, so the array [1,2,3] will get consoled. Then, the third console is in the function scope after the block scope; therefore, we can access the new value of var which is in the block scope, but we cannot access the const and let values that are in the block scope, so js prints the values of const and let which we can access which are in the function scope which results in printing the array [1,100,45].
+--------------------------------------------------------------
