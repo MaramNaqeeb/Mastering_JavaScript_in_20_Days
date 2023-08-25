@@ -63,7 +63,8 @@ topic="React";
 console.log("welcome");
 }
 otherClass();
-// JS will through a reference error, because with the strict mode, the global scope will not create a marble for undeclared variable as in the case of topic because it is not defined.
+// JS will through a reference error, because with the strict mode, the global scope will not create a marble
+// for undeclared variable as in the case of topic because it is not defined.
 ```
 ### Nested scope
 ##### Example
@@ -146,4 +147,5 @@ getPerson();
 When we use map, we spend more characters than using the function declaration.
 
 Note1: A function declaration has some benefits over a named function expression, but named function expressions have huge benefits over anonymous function declarations.
+
 Note2: We only do anonymous function expression in the arrow expression form because I was getting lexical clicks.
