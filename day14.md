@@ -175,5 +175,50 @@ return  id;
 ### Const 
 Const is better than let.
 
-Const is not unique to JS, it is found in many language in which that is confusing. Const  means in programming languages a variable that cannot be reassigned.
+Const is not unique to JS, it is found in many language in which that is confusing. Const  means in programming languages a variable that cannot be reassigned, but we can mutate values such as:
+```javascript
+const teachers=[“Kyle”,”Suzy”]
+teachers[1]=”Brian”  //allowed
+```
+So, there is a difference between mutable assignment and mutable values.
+We use const only with primitive immutable values.
+
+## Hoisting
+It is just a metaphor, it is not actually exist. According to hoisting, we move the variable declaration or function calls first and then make execution.
+
+If JS finds the variable declaration before execution that is hoisting. 
+##### Example
+```javascript
+var student;
+student;	//undefined
+student=”You”;
+```
+This differentiates a function declaration from a function expression in which to avoid errors we need to have all the function defined before calling it. (no hoisting with function expression).
+##### Example on var hoisting 
+```javascript
+var teacher =”Kyle”;
+otherTeacher()function otherTeacher(){
+console.log(teacher);	//undefined
+var teacher =”Suzy”;
+}
+```
+##### Example on function hoisting
+```javascript
+teacher =”Kyle”;
+var teacher;
+
+getTeacher();
+function  getTeacher(){
+return teacher;
+}
+```
+Note1: It is not a good idea to assign a variable earlier in the scope before its declaration.
+
+Note2: people feel more comfortable with function hoisting than with variable hoisting.
+
+Let does not hoist because it throws an TDZ error because let and const hoist to a block while var hoist to a function. Also, when var says that there is a variable, it says when the scope starts, initialize it to  undefined whereas when let  hoists its variables into its block scope, it says create a location called teacher, but do not initialize it(uninitialized state, that means you cannot touch it yet until we find const or let declaration (TDZ)). 
+
+The TDZ happens because of const not because of let in which const initializes itself to undefined and then we console that variable, you saw it undefined and then later you saw it with the value 42, this violates the concept of a const. So TDZ is mainly for const but they assign it to let as well.
+
+
 
