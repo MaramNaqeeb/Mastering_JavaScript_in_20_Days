@@ -253,6 +253,35 @@ for (var i = 0; i < 5; i++) {
     }, 100);
 }
 ```
--------------------------------------------------------------------
+------------------------------------------------------------------
+### QUESTION #2
 
+Given the following code snippet and **explain what's happening**. 
+
+```javascript
+
+for (let i = 0; i < 5; i++) {
+   let array = [];
+   array.push(i);
+   console.log("Current array is: ", array)
+}
+
+```
+The current output is: 
+"Current array is: [ 0 ]" "Current array is: [ 1 ]" "Current array is: [ 2 ]"
+"Current array is: [ 3 ]" "Current array is: [ 4 ]".
+
+The output should be: "Current array is: [0, 1, 2, 3, 4]".
+
+Provide a solution to fix it. 
+#### Solution
+```javascript
+
+let array = [];
+for (let i = 0; i < 5; i++) {
+array.push(i);
+}
+console.log("Current array is: ", array)
+```
+------------------------------------------------------------------
 
