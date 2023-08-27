@@ -253,6 +253,8 @@ for (var i = 0; i < 5; i++) {
     }, 100);
 }
 ```
+Here we have to subtract 1 from i and use pearanthese around i to get the reversed order of the value of i. However, if the variable used in the loop is let we can simply use (i) without subtraction.
+
 ------------------------------------------------------------------
 ### QUESTION #2
 
@@ -283,5 +285,47 @@ array.push(i);
 }
 console.log("Current array is: ", array)
 ```
-------------------------------------------------------------------
+Here we have to get the empty array and the console.log out of the loop.
 
+------------------------------------------------------------------
+### QUESTION #3
+
+Given the following code snippet and **explain what's happening**. 
+
+```javascript
+
+let functions = [];
+
+for (var i = 0; i < 5; i++) {
+  functions.push(() => {
+    console.log("Current value of i is:", i);
+  });
+}
+
+functions.forEach((func) => func());
+
+```
+
+The current output is: 
+
+"Current value of i is: 5" "Current value of i is: 5" "Current value of i is: 5"
+"Current value of i is: 5" "Current value of i is: 5"
+
+The output should be: 
+
+"Current value of i is: 0" "Current value of i is: 1" "Current value of i is: 2"
+"Current value of i is: 3" "Current value of i is: 4"
+
+Provide a solution to fix it. 
+#### Solution 
+```javascript
+let functions = [];
+
+for (let i = 0; i < 5; i++) {
+  functions.push(() => {
+    console.log("Current value of i is:", i--);
+  });
+}
+functions.forEach((func) => func());
+```
+Here we have to change the var into let in the for loop and subtract 1 from i in a reversed order.
