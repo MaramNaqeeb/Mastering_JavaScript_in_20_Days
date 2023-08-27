@@ -177,5 +177,47 @@ const preservedGreet = preserveThis(obj.greet);
 preservedGreet(preserveThis(obj.greet('Hello'))); // Output: "Hello, John!"
 
 ```
+### QUESTION #3
 
+Consider the 2 following examples and distinguish the different output in each
+one with them with a reasoning.
+
+**Example 1:**
+
+```javascript
+function outer1() {
+  var x = 10;
+
+  var inner1 = function() {
+    console.log(x);
+  };
+
+  inner1();
+}
+
+outer1(); // Output: 10
+```
+
+> **Reasoning for example 1's output:**
+When JS executes console.log(x), it looks for the value of the var x in the inner function called inner1() first, if it does not find it there, JS looks for it in the outer function called outer1(), if it finds it in outer1, JS prints the value of x which is in this case 10.
+
+**Example 2:**
+
+```javascript
+function outer2() {
+  var x = 10;
+
+  var inner2 = function() {
+    var x = 20;
+    console.log(x);
+  };
+
+  inner2();
+}
+
+outer2(); // Output: 20
+```
+
+> **Reasoning for example 2's output:**  
+When JS executes console.log(x), it looks for the value of the var x in the inner function called inner2() first, if it finds it there, JS prints the value of x that is in the function inner2() which is in this case 20, otherwise, it looks for the value of x in the outer function called outer2().
 -------------------------------------------------------------------
