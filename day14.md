@@ -220,5 +220,39 @@ Let does not hoist because it throws an TDZ error because let and const hoist to
 
 The TDZ happens because of const not because of let in which const initializes itself to undefined and then we console that variable, you saw it undefined and then later you saw it with the value 42, this violates the concept of a const. So TDZ is mainly for const but they assign it to let as well.
 
+# Learning sprint (1), week (3), day (4) delieverables
+
+## ADVANCED SCOPE:
+
+### QUESTION #1
+
+Given the following code snippet and **explain what's happening**.
+
+```javascript
+for (var i = 0; i < 5; i++) {
+    setTimeout(function() {
+      console.log("value of [i] is: ", i);
+    }, 100);
+}
+```
+
+The current output is: "value of [i] is: 5" five times.
+
+The output should be: 
+
+"value of [i] is: ", 0 "value of [i] is: ", 1 "value of [i] is: ", 2 "value of
+[i] is: ", 3 "value of [i] is: ", 4
+
+Without changing anything in the for loop's code itself, provide a solution to
+fix it.
+#### Solution
+```javascript
+for (var i = 0; i < 5; i++) {
+    setTimeout(function() {
+      console.log("value of [i] is: ",(i-=1));
+    }, 100);
+}
+```
+-------------------------------------------------------------------
 
 
