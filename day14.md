@@ -253,6 +253,7 @@ for (var i = 0; i < 5; i++) {
     }, 100);
 }
 ```
+#### Explanation
 Here we have to subtract 1 from i and use pearanthese around i to get the reversed order of the value of i. However, if the variable used in the loop is let we can simply use (i) without subtraction.
 
 ------------------------------------------------------------------
@@ -285,6 +286,7 @@ array.push(i);
 }
 console.log("Current array is: ", array)
 ```
+#### Explanation
 Here we have to get the empty array and the console.log out of the loop.
 
 ------------------------------------------------------------------
@@ -328,4 +330,5 @@ for (let i = 0; i < 5; i++) {
 }
 functions.forEach((func) => func());
 ```
+#### Explanation
 Here we have to change the var into let in the for loop and subtract 1 from i in a reversed order.
