@@ -149,3 +149,33 @@ When we use map, we spend more characters than using the function declaration.
 Note1: A function declaration has some benefits over a named function expression, but named function expressions have huge benefits over anonymous function declarations.
 
 Note2: We only do anonymous function expression in the arrow expression form because I was getting lexical clicks.
+
+# Learning sprint (1), week (3), day (3) delieverables
+
+### QUESTION #2
+
+Build a function called `preserveThis` that takes a function as input and
+returns a new arrow function that behaves the same way as the input function but
+preserves the original this context when used as a method of an object.
+
+```javascript
+
+// Example object
+const obj = {
+  name: 'John',
+  greet: function (greeting) {
+    console.log(`${greeting}, ${this.name}!`);
+  }
+};
+
+const preserveThis = (func) => {
+ return () =>  obj.name + func; 
+}
+
+const preservedGreet = preserveThis(obj.greet);
+
+preservedGreet(preserveThis(obj.greet('Hello'))); // Output: "Hello, John!"
+
+```
+
+-------------------------------------------------------------------
