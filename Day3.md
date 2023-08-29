@@ -115,18 +115,13 @@ result2=[1,2,3,4]
 number2=[1,2,3]
 
 ``` .push() ``` changes the original array. Thus, it still points to the original array in which it returns the same array (manipulate that original array to be something else) it mutate the array or change the array in place.
-##### Example
-```javascript
-let number1=[1,2,3];
-let result1=number1.concat([4])
-```
-the output:
+##### Example:
+``` let fruits=[“orange”,”apple”, “strawberry”] ```
+``` let lastItem=fruits.push("banana") ``` "banana" will be added
 
-result1=[1,2,3,4]
+//the original array will change:
 
-//And 
-
-number1=[1,2,3,4]
+fruits=[“orange”,”apple”, “strawberry”,"banana"]
 
 ## Objects
 An object is a collection of properties that point to values of diffrent data types.
