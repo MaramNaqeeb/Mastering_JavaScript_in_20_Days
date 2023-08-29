@@ -216,7 +216,7 @@ Consider the following JavaScript expression:
 What will be the output of this expression? What are the steps of evaluation taken by JS?
 ```javascript
 console.log(4 + 5 * "7");
-// the output: 9
+// the output: 39
 /* explanation: JS will multiply 5 by 7 without first as the multiplication is the strongest operation and
 then it adds 4 to the result of the multiplication and it does not care about the quotes around number 7
 */
