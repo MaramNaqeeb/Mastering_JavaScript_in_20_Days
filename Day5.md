@@ -1,5 +1,5 @@
 # Conditionals, Map &Filter
-in this file, I will show how to write conditional statements using different syntax in addition to some logical operators that are used in conditional statements. Furthermore, I will introduce some important and useful methods used with arrays such as map, filter, and spread operator.
+In this file, I will show how to write conditional statements using different syntax in addition to some logical operators that are used in conditional statements. Furthermore, I will introduce some important and useful methods used with arrays such as map, filter, and spread operator.
 
 ## Conditions
 - ### ``` if ``` & ``` else ``` statements
@@ -107,7 +107,7 @@ This project is a quiz of true or false questions with an explanation of the ans
     // and add the "correct"/"incorrect" class as appropriate
 ```javascript
  for (let button of optionButtons) {
-      button.addEventListener("clcik", (event) => {
+      button.addEventListener("click", (event) => {
         explanation.textContent = fact.explanation;
 
 
