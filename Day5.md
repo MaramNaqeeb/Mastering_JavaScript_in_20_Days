@@ -71,7 +71,7 @@ In this file, I will show how to write conditional statements using different sy
 
   - Ternary operator
     
-      The conditional ternary operator is a shortcut fro writing quick conditions without the use of the if statement. 
+      The conditional ternary operator is a shortcut for writing quick conditions without the use of the if statement. 
       ##### Its syntax:
       ``` Condition ? valueIfTrue : valueIfFalse; ```
       
