@@ -96,11 +96,11 @@ While
 
 ```document.title.includes("JavascripT")``` the output: true  because of the capital T 
 #### 	Capitalize the heading “Tic Tac Toe” 
-    ```document.querySelector("header h1").style.textTransform="upperCase"```
+``` document.querySelector("header h1").style.textTransform="upperCase" ```
 OR
 
 ```var upperHeader= document.querySelector("header h1").textContent.toUpperCase()
-document.querySelector("header h1").textContent=upperHeader
+document.querySelector("header h1").textContent.toUpperCase()
 ```
 
 ## Operators
