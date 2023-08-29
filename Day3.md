@@ -27,7 +27,7 @@ An array can be defined as keep multiple values together in a single collection(
  - ``` .push() ``` to add an item to the end of an array
     ##### Example:
    ``` let fruits=[“orange”,”apple”, “strawberry”] ```
-   ``` let lastItem=fruits.pop("banana") ``` "banana" will be added
+   ``` let lastItem=fruits.push("banana") ``` "banana" will be added
 
  - ``` .sort() ``` to sort the strings alphabetically
     ##### Example
