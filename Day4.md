@@ -91,7 +91,7 @@ Scope defines where variables are in play(where variable are declared)
 
 ## Types of Scopes
 - ### The global scope
-The widest scoope is the global scope in which the variables in that scope are seen and accessed from any place in the programme.
+The widest scope is the global scope in which the variables in that scope are seen and accessed from any place in the programme.
 ##### Example
 ```javascript
 var sayHi="Hi"
