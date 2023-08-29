@@ -12,7 +12,7 @@ Value is a unit of info that have certain characteristics (data).
  It includes strings, numbers, boolean, undefined, and null.
 We can use ``` typeof ``` to return a string that indicates the type of values in js. 
 
-#### String: is a textual data type that can be represented using back text, single quote, or double quotes such as "Hello".
+#### String: is a textual data type that can be represented using back ticks, single quote, or double quotes such as "Hello".
 #### Number: is an integer or long integer such as 23.
 #### Boolean: it returns true or false values
 #### Undefined: it happens when the user does not assign the variable to a value mistakely.
