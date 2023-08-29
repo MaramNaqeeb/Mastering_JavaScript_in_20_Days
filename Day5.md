@@ -204,7 +204,7 @@ This game is a game of multiple choices in which it is a good application of whi
     }
 ```
 ## SetTimeOut()
-Time in javascript is asynchronous which means at a different time (not at a same time).
+Time in javascript is a synchronous which means at a different time (not at a same time).
 
 If we want to run a code that takes a long time such as asking a user to pick a file, waiting for user events, getting permission to access the camera/mic, and loading data from the interwebs, but we do not want to wait a long time to execute the program we need to use an asynchronous function.
 
