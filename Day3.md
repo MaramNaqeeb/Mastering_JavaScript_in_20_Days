@@ -19,8 +19,7 @@ An array can be defined as keep multiple values together in a single collection(
   ``` fruits.includes(“orange”) ```   the output: true
 
 - ``` .pop() ``` to remove the last item in an array
-  ##### Example
-  An array can be defined as keep multiple values together in a single collection(list).
+
   ##### Example:
   ``` let fruits=[“orange”,”apple”, “strawberry”] ```
   ``` let lastItem=fruits.pop() ``` "strawberry" will be removed
