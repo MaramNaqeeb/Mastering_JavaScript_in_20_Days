@@ -229,7 +229,7 @@ What will be the output of this expression? What are the steps of evaluation tak
 let result = 5 + 2 * 3 - 1;
 // the output: 10
 /* explanation: JS will multiply 2 by 3 first as multiplication is the strongest oparation and then it adds 5 to the
- result and then subtract 1 from the result as we the operators of the same level such as + and - work from left to right
+ result and then subtract 1 from the result as the operators of the same level such as + and - work from left to right
 */
 ```
 
