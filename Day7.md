@@ -14,7 +14,7 @@ Memory mean that we store data inside string, arrays or other data types.
 - #### Call stack (a traditional way to store data)
 Through call stack, Js keeps track of what function is currently running (where is a thread of execution).
 
-When we wun a function, we add it to  the call stack, when wefFinish running the function,js removes it from the call stack.
+When we run a function, we add it to  the call stack, when we finish running the function,js removes it from the call stack.
 
 Whatever is top of the call stack (that’s the function we are currently running
 
