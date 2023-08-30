@@ -20,7 +20,7 @@ APIs provide URLs that point at data.
 ``` fetch(“https://dog.ceo/api/breed/hound/list”); ```
 #### to get the values of the fetch data we use promises
 
-Promises are used when we are doing of looking for something that needs a long time in which it has to do with event loop and asynchronous code.
+Promises are used when we are looking for something that needs a long time in which it has to do with event loop and asynchronous code.
 As fetching for data takes a long of time, we need to use promises to get the data from the url.
 
 ### 3 Possible States of promises 
