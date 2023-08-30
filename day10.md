@@ -22,8 +22,7 @@ OOP is the opposite of functional programmnig in that functional programming has
 
   ```
   Note: the functions on objects are called methods.
-  
-  ### ``` Object.create() ```
+### Function Object
 If we have a code that is run multiple times like adding properties or methods, we can wrap them up in  generalize function (abstract it) which means we save that function and use it again for many times for different objects.
 
   ##### Example
@@ -53,7 +52,7 @@ user1.incerement();
       our functions are just copies 
    - Benefits: it is simple and easy to reason about.
     
-  ##### To solve that problem, we need to create one function to be used without making a cope of it when we want to use it with objects; this is called prototype chain.
+  ##### To solve that problem, we need to create one function to be used without making a copy of it when we want to use it with objects; this is called prototype chain.
   ## Prototype chain
   I will explan the prototype chain through the following example:
   ##### Example
