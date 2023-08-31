@@ -330,7 +330,7 @@ console.log(Number(msg)+num)
   }
 ```
 ## Boxing
-To access the  .length of a string value we use boxing, which is a form of implicit coercion. To access the property of a primitive value JS coerces the primitive value into an object counterpart so that we can access the properties and methods on them, so the code will become clear.
+To access the  .length of a string value we use boxing, which is a form of implicit coercion. To access the property of objects, JS coerces the primitive value into an object counterpart so that we can access the properties and methods on them, so the code will become clear.
 
 
 Note1:It is useful to use the implicit Boolean coercion with undefined, null, or objects, but not as much with strings, or numbers because we have some corner cases.
