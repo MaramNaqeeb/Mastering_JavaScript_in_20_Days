@@ -231,7 +231,7 @@ var studentCount :number =16 studentName;
 
 ## Summary 
 JS has a dynamic type system, which users various forms of coercion for value type conversion, including equality comparison.
-However, the prevailing response seems to be: avoid as much of this system as possible, and use === to “protect” from needing to worry about types.
+However, the prevailing response seems to be avoid as much of this system as possible, and use === to “protect” from needing to worry about types.
 
 # Learning sprint (1), week (3), day (2) delieverables
 
