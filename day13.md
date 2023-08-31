@@ -136,7 +136,7 @@ var ids=people.map(person => person.id);
 
 #### Some times function declaration is more concise than arrow functions as in the following example:
 ```javascript
-var getId=>person=>person.if;
+var getId=person=>person.id;
 var ids=people.map(getId);
 
 var getDataFrom= person => getData(person.id);
