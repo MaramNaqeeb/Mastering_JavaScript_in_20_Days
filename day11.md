@@ -244,7 +244,7 @@ More examples on Number:
 [1,2,3]		         //NaN
 [[[[]]]]		       //0
 {}	               //NaN
-{valueOf()         //{return 3;}}	3 	//here we override the value of an object
+{valueOf(){return 3;}}	 //3 	//here we override the value of an object
 ```
 Note: The empty string is the root od all coercion evil.
 - Boolean
