@@ -68,7 +68,7 @@ In the above example, it is not just the number 42, but it is 42 within this spa
 
 ## Special values
 Special values are used to avoid bugs or to get more power out of our js language.
-- ### Nan : it is an acronym of not a number. This do not mean that the value is not a number, but rather it indicates an invalid number.
+- ### Nan : it is an acronym. This do not mean that the value is not a number, but rather it indicates an invalid number.
   ##### Example
   ```javascript
   var myCatAge=Number("n/a") 	//the output: NaN
