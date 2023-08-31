@@ -334,6 +334,7 @@ To access the  .length of a string value we use boxing, which is a form of impli
 
 
 Note1:It is useful to use the implicit Boolean coercion with undefined, null, or objects, but not as much with strings, or numbers because we have some corner cases.
+
 Note2: All programming language have conversion, and have type conversion corner cases.
 ```javascript
 Number( “” );		//0
