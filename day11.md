@@ -196,14 +196,14 @@ In order to make coercion we use abstract opeartions, such as toPrimitive, toStr
   ```
 -	ToString()
   Is an abstract operation that takes a value and gives the representation of that value in string form.
- 	##### Example
- 	```javascript
+##### Example
+ ```javascript
   null   	// "null"
   false  	// "false"
   3		    //  "3"
   0		    //  "0"
   -0	   	//  "0"
-    ```
+```
   If we call toString(object), that will invoke the toPrimitive(string), which ends up calling toString() and then valueOf().
   ##### Example
   ```javascript
