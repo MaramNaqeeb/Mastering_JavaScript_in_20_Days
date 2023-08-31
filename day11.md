@@ -373,7 +373,6 @@ Number(false)		//0
 (true)<3		//true
 1<3			//true
 3>2			//true
-2>31			//true
 3>2>1			//false
 (3>2)>1			//false
 (true)>1		//false
