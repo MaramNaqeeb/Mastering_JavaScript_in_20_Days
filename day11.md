@@ -174,7 +174,7 @@ var myGPA= String(transcript.gpa);	//the output:”3.54”
 ```
 ## Coercion
 Coercion can be defined as an implicit conversion from one data type to another.
-In order to make coercion we use abstract opeartions, such as toPrimitive, toString, Number, and Boolean.
+Explicit Coercion: In order to make explicit coercion we use abstract opeartions, such as toPrimitive, toString, Number, and Boolean.
 
 -	ToPrimitive(hint) takes an optional type hint
 
