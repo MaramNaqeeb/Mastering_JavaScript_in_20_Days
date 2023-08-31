@@ -197,7 +197,8 @@ This differentiates a function declaration from a function expression in which t
 ##### Example on var hoisting 
 ```javascript
 var teacher =”Kyle”;
-otherTeacher()function otherTeacher(){
+otherTeacher();
+function otherTeacher(){
 console.log(teacher);	//undefined
 var teacher =”Suzy”;
 }
