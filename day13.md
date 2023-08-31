@@ -27,7 +27,7 @@ Note1: having two variables with the same name is called shadowing.
 
 Note2: all the scopes are determined at the compiled time not at the run time.
 
-Note3: even if the var teacher =”Kyle” looks like a one statement, it is actually two parts, the declaration of the variable that what the compiler handles, and the value “Kyle” that what the execution engine handles(when using the variables in the run time).
+Note3: even if the var teacher =”Kyle” looks like one statement, it is actually two parts, the declaration of the variable that what the compiler handles, and the value “Kyle” that what the execution engine handles(when using the variables in the run time).
 
 The variable teacher that is just declared and have a value assigned to, is in a target position/reference (receiving position) while question in console is in a source position/reference. Also, otherClass(); is in a source position because we are not assigning to it, but what  we must  be doing.
 
@@ -111,7 +111,7 @@ var keyHandler=function keyHandler(){	a named function expression (it is better)
 };
 ```
 #### Why should we prefer the named function expression
--	The name produces a reliable function self-reference (recursion, etc). Any time we need aa self reference to a function to access it values, we need to use a named function expression. We prefer to name the function expression over a variable in the outer scope.
+-	The name produces a reliable function self-reference (recursion, etc). Any time we need a self reference to a function to access it values, we need to use a named function expression. We prefer to name the function expression over a variable in the outer scope.
 -	More debuggable stack traces.(it shows up in the stack trace)
 -	More self-documenting code(unambiguous and shows the purpose of the function without reading the body of the code).
 
