@@ -298,7 +298,7 @@ Console.log(msg1+numStudents+msg2);
 But the weird thing here is that we called a method on a primitive value, so that means that there is an implicit coercion there. However, if we do not want to do any coercion to be explicit, we can use the fundamental object String, for example, without the new keyword string.
 ``` console.log(`There are ${String(num)} students`) ```
 
-if we use + operator with a string and a number, js will give us a string concatenation. To avoid that, and to turn the make js prefer the number over the string we use + operator before the operation as the following example:
+if we use + operator with a string and a number, js will give us a string concatenation. To avoid that, and to make js prefer the number over the string we use + operator before the operation as the following example:
 ```javascript
 var num=16;
 var numString="5"
