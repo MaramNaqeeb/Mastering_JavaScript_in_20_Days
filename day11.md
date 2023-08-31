@@ -247,7 +247,8 @@ More examples on Number:
 {valueOf(){return 3;}}	 //3 	//here we override the value of an object
 ```
 Note: The empty string is the root of all coercion evil.
-- Boolean
+- Boolean:
+
 Boolean is an abstract operation that converts the value into a boolean.It is less algorithmic and straight lookup. We have to check if the value isFalsy() or is Truthy() in which values in JS can be categorized into falsy or truthy.
 
 ```javascript
