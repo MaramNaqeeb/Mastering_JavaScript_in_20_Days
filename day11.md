@@ -273,7 +273,7 @@ function(){}
 {}   
 ```
 ## Cases of coercion
-Do not avoid coercion because it is evil.
+Do not avoid coercion for the reason that it is evil.
 ##### Example
 ```javascript
 var msg1="There are";
