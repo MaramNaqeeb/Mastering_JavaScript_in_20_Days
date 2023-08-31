@@ -378,13 +378,13 @@ Number(false)		//0
 (true)>1		//false
 1>1         //false
 ```
-# Learning sprint (1), week (3), day (1) delieverables
 If we call Number(object), that will invoke the toPrimitive(number), which ends up calling valueOf() and then toString().
 ```javascript
 (for [] and {} by default);
 valueOf(){return this;}	      //if value of that method  is an array or object that have not overridden,
                                 //it just returns itself. Thus, it will convert the value into string.
 ```
+# Learning sprint (1), week (3), day (1) delieverables
 
 ## Question 1:
 
