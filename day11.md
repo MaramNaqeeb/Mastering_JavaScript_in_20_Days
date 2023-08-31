@@ -167,7 +167,7 @@ Number()
 Boolean()
 ##### Example
 ```javascript
-var yesterday=new new Date (“May 6, 2019”);
+var yesterday= new Date (“May 6, 2019”);
 yesterday.toUTCSting(); 	//the output: “Wed,06 2019  06:00:00  GMT”
 
 var myGPA= String(transcript.gpa);	//the output:”3.54”
