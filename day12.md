@@ -186,7 +186,7 @@ Therefore, if you do not know the types, triple equals is the only reasonable ch
 #### Caveats:
 -	Inferencing is best-guess, not a guarantee. 
 -	Annotations are optional in which if we do not put an annotation on a variable, typescript will default to the any type unless you have that turned off, then you are not getting any benefit out of it.
--	Any part pf the application that isn’t types introduces uncertainty.
+-	Any part pf the application that isn’t typed introduces uncertainty.
 ##### Example
 ```javascript
 var teacher =”Kyle”;
